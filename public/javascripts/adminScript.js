@@ -2,7 +2,7 @@ let app=new Vue({
     el:"#app",
     data:{
         section:0,
-        general:{}
+        general:{mainImgUrl:null}
     },
     methods:{
         saveGeneral:async function(){
@@ -10,8 +10,12 @@ let app=new Vue({
         },
         uploadMainImage:async function(){
             //uploadFile((r)=>{})
-            alert("uploadMainImage")
-            await this.uploadFile((r)=>{alert(r);this.general.mainImgUrl=r })
+
+            await this.uploadFile(async (r)=>{
+                alert(r);
+                this.general.mainImgUrl=r;
+                await saveGeneral()
+            })
         },
         uploadFile:async function(callBack){
            let input=document.createElement("input")
@@ -27,11 +31,11 @@ let app=new Vue({
                    let r=await axios.post("/admin/uploadFile", fd, {headers: {
                            "Content-Type": "multipart/form-data",
                        }});
-                   console.log("change", r);
+
                    callBack(r.data)
                }
                catch (e){
-                   console.log(callBack)
+
                    console.warn(e)
                    alert("Ошибка HTTP ");
                }
