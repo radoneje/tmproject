@@ -11,7 +11,7 @@ router.get('/', adminAuth, function(req, res, next) {
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
   let ret =  await req.db.collection('general').findOne({id:"facts"})
-  res.json(ret?{}:ret.value)
+  res.json(ret?ret.value:{})
 });
 router.post('/general', adminAuth, async (req, res, next)=> {
   const result = await req.db.collection('general').replaceOne({id:"facts"}, {id:"facts", value:req.body});
