@@ -215,11 +215,16 @@ h2{
   cursor: pointer;
 }
 .statWr{
-  ;
+  justify-content: space-between;
 }
 .statItem{
   width: calc(50% - 12px);
   box-sizing: border-box;
   border: 2px solid #F0ECFE;
   border-radius: 108px;
+  padding: 32px;
 }
+.statItemText{font-weight: 800;
+  font-size: 54px;
+  line-height: 80px;
+  color: #7857F1;}
