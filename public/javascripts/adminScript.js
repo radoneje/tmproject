@@ -11,7 +11,7 @@ let app=new Vue({
         uploadMainImage:async function(){
             //uploadFile((r)=>{})
             alert("uploadMainImage")
-            await uploadFile((r)=>{alert(123);this.general.mainImgUrl=r })
+            await this.uploadFile((r)=>{alert(123);this.general.mainImgUrl=r })
         },
         uploadFile:async function(callBack){
            let input=document.createElement("input")
