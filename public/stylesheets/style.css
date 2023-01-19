@@ -137,6 +137,7 @@ section{
 
 .mainBlockL {
   width: calc(45%);
+  position: relative;
 }
 
 .mainBlockRWr {
@@ -192,7 +193,6 @@ h2{
   font-size: 18px;
   line-height: 27px;
   /* identical to box height, or 150% */
-
-
   color: #FFFFFF;
+  position: absolute;
 }
