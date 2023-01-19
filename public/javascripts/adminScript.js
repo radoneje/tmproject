@@ -19,6 +19,13 @@ let app=new Vue({
                    method: 'POST',
                    body: fd
                })
+               if (response.ok) { // если HTTP-статус в диапазоне 200-299
+                                  // получаем тело ответа (см. про этот метод ниже)
+                   let json = await response.json();
+                   console.log(json)
+               } else {
+                   alert("Ошибка HTTP: " + response.status);
+               }
            }
            input.click();
         }
