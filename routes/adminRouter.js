@@ -11,12 +11,11 @@ router.get('/', adminAuth, function(req, res, next) {
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
   let ret =  await req.db.collection('general').findOne({id:"facts"})
-  res.json(ret)
+  res.json(ret?{}:ret.value)
 });
 router.post('/general', adminAuth, async (req, res, next)=> {
-
-  let ret =  await req.db.collection('general').findOne({id:"facts"})
-  res.json(ret)
+  const result = await req.db.collection('general').replaceOne({id:"facts"}, {id:"facts", value:req.body});
+  res.json(result)
 });
 
 module.exports = router;
