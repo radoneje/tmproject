@@ -9,7 +9,8 @@ let app=new Vue({
             await axios.post("/admin/general",this.general )
         },
         uploadMainImage:async function(callBack){
-            await uploadFile(()=>{alert(123)})
+            //uploadFile((r)=>{})
+            await uploadFile((r)=>{alert(123);this.general.mainImgUrl=r })
         },
         uploadFile:async function(callBack){
            let input=document.createElement("input")
