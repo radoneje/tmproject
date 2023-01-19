@@ -1,8 +1,184 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body,
+a {
+  color: #586368;
 }
 
 a {
-  color: #00B7FF;
+  text-decoration: none;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 4px 4px;
+  margin: 0 8px;
+  border-radius: 4px;
+}
+
+.menu-item:hover {
+  background-color: #D9DBDC;
+}
+
+
+.mainTower {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer {
+  border-top: 2px solid #F0ECFE;
+  padding-top: 34px;
+
+}
+
+.footerText {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 28px;
+}
+
+.footerTitle {
+  margin-bottom: 14px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.foolerContact {
+  margin-left: 34px;
+}
+
+.foolerContact svg {
+  margin-right: 12px;
+}
+
+.footerImage img {
+  width: 100%;
+}
+
+.mainMenu {
+  margin: 24px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainMenuDivaider {
+  height: 2px;
+;
+  background: #F0ECFE;
+  box-shadow: 0px 2px 8px rgba(156, 172, 196, 0.24);
+  margin-bottom: 48px;
+}
+
+.mainSubMenuItem {
+
+  padding: 8px 24px;
+  color: white;
+  background-color: #6944F0;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  border-radius: 33px;
+  margin-left: 24px;
+}
+
+.mainSubMenuItem:last-child {
+  background-color: #1A0959;
+}
+
+.mainSubMenuItem svg {
+  margin-left: 8px;
+}
+
+.mainSubMenuItem:hover {
+  background-color: #8769F3;
+}
+
+.mainSubMenuItem:last-child:hover {
+  background-color: #8D9297;
+}
+
+.mainBlock {
+
+  background-color: #1A0959;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mainBlockR {
+  width: 55%;
+}
+
+.mainBlockR img {
+  width: 100%;
+}
+
+.mainBlockL {
+  width: calc(45%);
+}
+
+.mainBlockRWr {
+  position: relative;
+}
+
+.mainBlockRTitleWr {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  background: linear-gradient(360deg, #1A0959 12.5%, rgba(26, 9, 89, 0) 100%);
+  border-radius: 12px;
+  justify-content: flex-start !important;
+  padding-left: 24px;
+}
+
+.mainBlockRTitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height, or 150% */
+  margin-left: 12px;
+
+  /* Purple Heart 11 */
+
+  color: #F8F6FE;
+}
+.MLdecor1{
+  margin-top: 42px;
+  margin-left: 54px;
+}
+h1{
+  margin-left: 64px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 80px;
+  margin-top:64px;
+  margin-bottom: 0;
+}
+h2{
+  color: #FFFFFF;
+  margin-left: 64px;
+  font-weight: 600 !important;
+  font-size: 32px;
+  line-height: 54px;
+  margin-top:0
 }
