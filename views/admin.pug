@@ -7,7 +7,7 @@ block content
         .row
             .col-2
                 .d-grid.gap-2
-                    .btn.btn-outline-secondary.mb-3(v-bind:class='{"btn-primary":section==0}' v-on:click="section=0" style="text-align: left;") Общая информация
+                    .btn.mb-3(v-bind:class='{"btn-primary":section==0, "btn-outline-secondary":section!=0}' v-on:click="section=0" style="text-align: left;") Общая информация
                     .btn.btn-outline-secondary.mb-3(v-on:click="section=1" style="text-align: left;") Видео
                     .btn.btn-outline-secondary.mb-3(v-on:click="section=2" style="text-align: left;") Услуги
                     .btn.btn-outline-secondary.mb-3(v-on:click="section=3" style="text-align: left;") Команда и география
