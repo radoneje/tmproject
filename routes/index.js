@@ -13,8 +13,9 @@ router.get('/', async function(req, res, next) {
 });
 router.get('/file/:filename', async function(req, res, next) {
 
+  console.log(req.params.filename)
   let ret =  await req.db.collection('files').findOne({filename:req.params.filename})
-
+  console.log(ret)
   if(!ret)
     return res.sendStatus(404);
   var file = path.join(__dirname, "..", ret.path);
