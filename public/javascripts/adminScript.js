@@ -8,8 +8,9 @@ let app=new Vue({
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
         },
-        uploadMainImage:async function(callBack){
+        uploadMainImage:async function(){
             //uploadFile((r)=>{})
+            alert(10)
             await uploadFile((r)=>{alert(123);this.general.mainImgUrl=r })
         },
         uploadFile:async function(callBack){
