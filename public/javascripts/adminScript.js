@@ -9,10 +9,8 @@ let app=new Vue({
             await axios.post("/admin/general",this.general )
         },
         uploadMainImage:async function(){
-            //uploadFile((r)=>{})
 
             await this.uploadFile(async (r)=>{
-
                 this.general.mainImgUrl=r;
                 await this.saveGeneral()
             })
