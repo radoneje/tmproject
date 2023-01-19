@@ -11,7 +11,7 @@ router.get('/', adminAuth, function(req, res, next) {
 });
 router.get('/generel', adminAuth, async (req, res, next)=> {
   let r = await app.db.collection('menu')
-  return r
+  res.json(r)
 });
 
 module.exports = router;
