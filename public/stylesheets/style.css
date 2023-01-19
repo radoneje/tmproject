@@ -189,12 +189,15 @@ h2{
   margin-top:0
 }
 .downloadPrez{
+
+  position: absolute;
+}
+.downloadPrez a{
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
   /* identical to box height, or 150% */
   color: #FFFFFF;
-  position: absolute;
 }
 .downloadPrezDecor{
   width: 104px;
