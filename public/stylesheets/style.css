@@ -191,6 +191,8 @@ h2{
 .downloadPrez{
 
   position: absolute;
+  bottom: 56px;
+  left: 24px;
 }
 .downloadPrez a{
   font-weight: 600;
