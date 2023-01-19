@@ -84,8 +84,8 @@ function onError(error) {
 async function onListening() {
   await app.mongo.connect();
   app.db=app.mongo.db('tmproject');
-  const sections = app.db.collection('sections');
-  console.log(sections)
+  const video = await app.db.collection('sections').findOne({id:"video"});
+  console.log(video)
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
