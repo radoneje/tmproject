@@ -253,3 +253,6 @@ h4{
 .pointer{
   cursor: pointer;
 }
+.img-thumbnail{
+  width: 150px;
+}
