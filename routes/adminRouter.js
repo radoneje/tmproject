@@ -11,7 +11,6 @@ router.get('/', adminAuth, function(req, res, next) {
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
   let ret =  req.db.collection('general').findOne({id:"projectCount"})
-
   res.json(ret)
 });
 
