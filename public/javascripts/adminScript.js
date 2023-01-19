@@ -26,6 +26,7 @@ let app=new Vue({
                    callBack(r.data)
                }
                catch (e){
+                   console.log(callBack)
                    console.warn(e)
                    alert("Ошибка HTTP ");
                }
