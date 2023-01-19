@@ -13,8 +13,8 @@ let app=new Vue({
             input.type="file";
            input.onchange=async  (e)=>{
                let fd=new FormData();
-               fd.append("file", e.file)
-               console.log("change", e)
+               fd.append("file", input.files[0])
+               console.log("change", input.files)
            }
            input.click();
         }
