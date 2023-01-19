@@ -16,9 +16,9 @@ let app=new Vue({
                console.log("card", input.files[0]);
                fd.append("card", input.files[0])
                fd.append("ddd", "dd")
-               console.log("fd");
+               console.log("fd", fd.getHeaders());
                try {
-                   let r=await axios.post("/admin/uploadFile", fd);
+                   let r=await axios.post("/admin/uploadFile", fd, { headers: fd.getHeaders()});
                    console.log("change", r);
                }
                catch (e){
