@@ -8,7 +8,7 @@ let app=new Vue({
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
         },
-        uploadFile:async function(){
+        uploadFile:async function(toRet){
            let input=document.createElement("input")
             input.type="file";
            input.onchange=async  (e)=>{
@@ -22,6 +22,7 @@ let app=new Vue({
                            "Content-Type": "multipart/form-data",
                        }});
                    console.log("change", r);
+                   toRet=r.data;
                }
                catch (e){
                    alert("Ошибка HTTP ");
