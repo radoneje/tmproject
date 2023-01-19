@@ -25,10 +25,11 @@ router.post('/general', adminAuth, async (req, res, next)=> {
   res.json(ret)
 });
 router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
-  console.log(req.file)
+
   if (req.file) {
     req.file.originalname = Buffer.from(req.file.originalname, 'latin1').toString('utf8')
-    res.json(req.file)
+    console.log(req.file)
+    res.json("/uploads/"+filename)
   }
   else res.sendStatus(404)
 
