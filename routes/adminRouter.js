@@ -11,7 +11,7 @@ router.get('/', adminAuth, function(req, res, next) {
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
   let cursor =  req.db.collection('general').find();
-  if(r._eventsCount==0){
+  if(cursor._eventsCount==0){
     let r = await req.db.collection('general').insertMany([{id:"projectCount",value:0}])
     cursor =  req.db.collection('general').find();
   }
