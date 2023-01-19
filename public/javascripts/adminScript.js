@@ -18,7 +18,9 @@ let app=new Vue({
                fd.append("ddd", "dd")
                console.log("fd", fd.getHeaders());
                try {
-                   let r=await axios.post("/admin/uploadFile", fd, { headers: fd.getHeaders()});
+                   let r=await axios.post("/admin/uploadFile", fd, {headers: {
+                           "Content-Type": "multipart/form-data",
+                       }});
                    console.log("change", r);
                }
                catch (e){
