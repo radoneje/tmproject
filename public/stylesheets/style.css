@@ -214,3 +214,12 @@ h2{
   border-radius: 32px;
   cursor: pointer;
 }
+.statWr{
+  ;
+}
+.statItem{
+  width: calc(50% - 12px);
+  box-sizing: border-box;
+  border: 2px solid #F0ECFE;
+  border-radius: 108px;
+}
