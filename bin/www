@@ -87,7 +87,7 @@ async function onListening() {
   const video = await app.db.collection('sections').findOne({id:"video"});
   if(!video)
     await app.db.collection('sections').insertOne({id:"video",items:[]});
-
+console.log(video);
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
