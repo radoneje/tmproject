@@ -9,7 +9,7 @@ const adminAuth=(req, res, next)=>{
 router.get('/', adminAuth, function(req, res, next) {
   res.render("admin", {moment})
 });
-router.get('/generel', adminAuth, async (req, res, next)=> {
+router.get('/general', adminAuth, async (req, res, next)=> {
   let r = await app.db.collection('menu')
   res.json(r)
 });
