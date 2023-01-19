@@ -20,7 +20,7 @@ router.post('/general', adminAuth, async (req, res, next)=> {
     ret = await req.db.collection('general').insertOne( {id:"facts", value:req.body});
   }
    ret = await req.db.collection('general').replaceOne({id:"facts"}, {id:"facts", value:req.body});
-  res.json(result)
+  res.json(ret)
 });
 
 module.exports = router;
