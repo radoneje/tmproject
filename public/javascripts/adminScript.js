@@ -7,6 +7,14 @@ let app=new Vue({
     methods:{
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
+        },
+        uploadFile:async function(){
+           let input=document.createElement("input")
+            input.type=file;
+           input.onchange=async  ()=>{
+               alert("change")
+           }
+           input.click();
         }
     },
     watch:{
