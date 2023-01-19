@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', (req, res, next)=>{
   req.mongo=mongo;
-  req.db=app.db;
+  req.db=mongo.db('tmproject')
   next();
 });
 app.use('/', indexRouter);
