@@ -250,3 +250,6 @@ h4{
 .Allparams{
   width: 250px;
 }
+.pointer{
+  cursor: pointer;
+}
