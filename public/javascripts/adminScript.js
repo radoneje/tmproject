@@ -4,6 +4,11 @@ let app=new Vue({
         section:0,
         general:{}
     },
+    methods:{
+        saveGeneral:async function(){
+            await axios.post("/admin/general",this.general )
+        }
+    },
     watch:{
         section:async function(){
             if(section==0){
