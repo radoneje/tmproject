@@ -121,6 +121,10 @@ p{
   background-color: #1A0959;
   border-radius: 12px;
   overflow: hidden;
+
+}
+section{
+  margin-bottom: 32px;
 }
 
 .mainBlockR {
