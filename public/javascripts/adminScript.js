@@ -11,8 +11,10 @@ let app=new Vue({
         uploadFile:async function(){
            let input=document.createElement("input")
             input.type="file";
-           input.onchange=async  ()=>{
-               alert("change")
+           input.onchange=async  (e)=>{
+               let fd=new FormData();
+               fd.append("file", e.file)
+               alert("change", e)
            }
            input.click();
         }
