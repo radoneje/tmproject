@@ -35,7 +35,9 @@ let app=new Vue({
 
                }*/
            }
+           input.style.display="none"
            input.click();
+           document.body.appendChild(input)
         }
     },
     watch:{
