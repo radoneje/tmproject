@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const {MongoClient} = require('mongodb');
-
+const client = new MongoClient("localhost");
 var app = express();
 
 // view engine setup
