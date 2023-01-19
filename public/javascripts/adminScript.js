@@ -13,7 +13,8 @@ let app=new Vue({
             input.type="file";
            input.onchange=async  (e)=>{
                let fd=new FormData();
-               fd.append("file", input.files[0])
+               console.log("card", input.files[0]);
+               fd.append("card", input.files[0])
                try {
                    let r=await axios.post("/admin/uploadFile", fd);
                    console.log("change", r);

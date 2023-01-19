@@ -24,7 +24,7 @@ router.post('/general', adminAuth, async (req, res, next)=> {
    ret = await req.db.collection('general').replaceOne({id:"facts"}, {id:"facts", value:req.body});
   res.json(ret)
 });
-router.post('/uploadFile',upload.single('file'), async (req, res, next)=> {
+router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
   if (req.body.file) {
     req.body.file.originalname = Buffer.from(req.body.file.originalname, 'latin1').toString('utf8')
     res.json(req.body.file)
