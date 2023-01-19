@@ -231,6 +231,7 @@ h2{
   font-size: 54px;
   line-height: 80px;
   color: #7857F1;
+  margin-top: -20px;
 
 }
 .statItemDescr{
@@ -238,4 +239,5 @@ h2{
   font-size: 14px;
   line-height: 21px;
   color: #8D9297;
+  margin-top: -20px;
 }
