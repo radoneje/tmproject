@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const moment=require("moment")
+const multer  = require('multer')
 const upload = multer({dest: "uploads/"})
 
 const adminAuth=(req, res, next)=>{
