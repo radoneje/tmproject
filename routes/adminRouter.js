@@ -10,13 +10,9 @@ router.get('/', adminAuth, function(req, res, next) {
   res.render("admin", {moment})
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
-  let cursor =  req.db.collection('general').find();
-  if(cursor._eventsCount==0){
-    let r = await req.db.collection('general').insertMany([{id:"projectCount",value:0}])
-    cursor =  req.db.collection('general').find();
-  }
+  let ret =  req.db.collection('general').findOne({id:"projectCount"})
 
-  res.json(cursor)
+  res.json(ret)
 });
 
 module.exports = router;
