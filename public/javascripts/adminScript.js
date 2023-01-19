@@ -10,7 +10,7 @@ let app=new Vue({
         },
         uploadFile:async function(){
            let input=document.createElement("input")
-            input.type=file;
+            input.type="file";
            input.onchange=async  ()=>{
                alert("change")
            }
