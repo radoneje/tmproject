@@ -8,6 +8,13 @@ let app=new Vue({
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
         },
+        uploadPreza:async function(){
+
+            await this.uploadFile(async (r)=>{
+                this.general.preza=r;
+                await this.saveGeneral()
+            })
+        },
         uploadMainImage:async function(){
 
             await this.uploadFile(async (r)=>{
