@@ -22,5 +22,10 @@ router.post('/general', adminAuth, async (req, res, next)=> {
    ret = await req.db.collection('general').replaceOne({id:"facts"}, {id:"facts", value:req.body});
   res.json(ret)
 });
+router.post('/uploadFile', adminAuth, async (req, res, next)=> {
+
+  res.json(123)
+});
+
 
 module.exports = router;

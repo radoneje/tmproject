@@ -14,7 +14,11 @@ let app=new Vue({
            input.onchange=async  (e)=>{
                let fd=new FormData();
                fd.append("file", input.files[0])
-               console.log("change", input.files)
+               console.log("change", input.files);
+               const response = await fetch('/admin/uploadFile', {
+                   method: 'POST',
+                   body: data
+               })
            }
            input.click();
         }
