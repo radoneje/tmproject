@@ -26,6 +26,7 @@ let app=new Vue({
                    callBack(r.data)
                }
                catch (e){
+                   console.warn(e)
                    alert("Ошибка HTTP ");
                }
               /* const response = await fetch('/admin/uploadFile', {
