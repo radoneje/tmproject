@@ -14,8 +14,14 @@ let app=new Vue({
            input.onchange=async  (e)=>{
                let fd=new FormData();
                fd.append("file", input.files[0])
-               console.log("change", input.files);
-               const response = await fetch('/admin/uploadFile', {
+               try {
+                   let r=await axios.post("/admin/uploadFile", fd);
+                   console.log("change", r);
+               }
+               catch (e){
+                   alert("Ошибка HTTP ");
+               }
+              /* const response = await fetch('/admin/uploadFile', {
                    method: 'POST',
                    body: fd
                })
@@ -24,8 +30,8 @@ let app=new Vue({
                    let json = await response.json();
                    console.log(json)
                } else {
-                   alert("Ошибка HTTP: " + response.status);
-               }
+
+               }*/
            }
            input.click();
         }
