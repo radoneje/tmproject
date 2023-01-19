@@ -81,7 +81,8 @@ function onError(error) {
  * Event listener for HTTP server "listening" event.
  */
 
-function onListening() {
+async function onListening() {
+  await app.mongo.connect();
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr

@@ -7,9 +7,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const {MongoClient} = require('mongodb');
-const client = new MongoClient("mongodb://localhost");
+const mongo = new MongoClient("mongodb://localhost");
 var app = express();
-
+app.mongo=mongo;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -20,6 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/', (req, res, next)=>{
+  req.mongo=mongo;
+  next();
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
