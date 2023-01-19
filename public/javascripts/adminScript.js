@@ -17,7 +17,7 @@ let app=new Vue({
                console.log("change", input.files);
                const response = await fetch('/admin/uploadFile', {
                    method: 'POST',
-                   body: data
+                   body: fd
                })
            }
            input.click();
