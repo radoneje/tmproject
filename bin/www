@@ -83,16 +83,16 @@ function onError(error) {
 async function onListening() {
   await app.mongo.connect();
   app.db=app.mongo.db('tmproject');
-  const video = await app.db.collection('sections').findOne({id:"video"});
-  if(!video)
-    await app.db.collection('sections').insertOne({id:"video",items:[]});
+  /*const menu = await app.db.collection('menu').findOne({id:"menu"});
+  if(!menu)
+    await app.db.collection('menu').insertOne({id:"video",items:[]});
   const services = await app.db.collection('sections').findOne({id:"services"});
   if(!services){
     await app.db.collection('sections').insertOne({id:"services",items:[]});
     await app.db.collection('sections').insertOne({id:"command",items:[]});
     await app.db.collection('sections').insertOne({id:"clients",items:[]});
     await app.db.collection('sections').insertOne({id:"projects",items:[]});
-  }
+  }*/
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
