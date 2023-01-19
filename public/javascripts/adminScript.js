@@ -12,7 +12,7 @@ let app=new Vue({
            let input=document.createElement("input")
             input.type="file";
            input.onchange=async  (e)=>{
-               let fd=new FormData();
+               let fd = new FormData();
                console.log("card", input.files[0]);
                fd.append("card", input.files[0])
                fd.append("ddd", "dd")
