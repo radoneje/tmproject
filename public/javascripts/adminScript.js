@@ -16,7 +16,7 @@ let app=new Vue({
                console.log("card", input.files[0]);
                //fd.append("card", input.files[0])
                fd.append("ddd", "dd")
-               console.log("fd", fd);
+               console.log("fd", fd.getAll());
                try {
                    let r=await axios.post("/admin/uploadFile", fd);
                    console.log("change", r);
