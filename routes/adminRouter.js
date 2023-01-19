@@ -28,6 +28,7 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
   if (req.file) {
     req.file.originalname = Buffer.from(req.file.originalname, 'latin1').toString('utf8')
     req.file.date=new Date();
+    console.log(req.file)
     await req.db.collection('files').insertOne(req.file);
     res.json("/uploads/"+req.file.filename)
   }
