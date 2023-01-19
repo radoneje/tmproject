@@ -10,7 +10,7 @@ let app=new Vue({
         },
         uploadMainImage:async function(){
             //uploadFile((r)=>{})
-            alert(10)
+            alert("uploadMainImage")
             await uploadFile((r)=>{alert(123);this.general.mainImgUrl=r })
         },
         uploadFile:async function(callBack){
