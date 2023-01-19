@@ -12,9 +12,9 @@ let app=new Vue({
             //uploadFile((r)=>{})
 
             await this.uploadFile(async (r)=>{
-                alert(r);
+
                 this.general.mainImgUrl=r;
-                await saveGeneral()
+                await this.saveGeneral()
             })
         },
         uploadFile:async function(callBack){
