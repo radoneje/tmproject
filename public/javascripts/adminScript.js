@@ -14,7 +14,7 @@ let app=new Vue({
            input.onchange=async  (e)=>{
                let fd=new FormData();
                fd.append("file", e.file)
-               alert("change", e)
+               console.log("change", e)
            }
            input.click();
         }
