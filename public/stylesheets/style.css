@@ -196,3 +196,9 @@ h2{
   color: #FFFFFF;
   position: absolute;
 }
+.downloadPrezDecor{
+  width: 104px;
+  height: 104px;
+  background: #40CFF9;
+  margin-right: -52px;
+}
