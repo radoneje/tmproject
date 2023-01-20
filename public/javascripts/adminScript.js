@@ -10,6 +10,7 @@ let app=new Vue({
     methods:{
         toggleService:async function(section, item, prm){
             item[item]=!item[prm];
+            console.log(item, prm)
             await this.saveService(section, item)
             if(prm="isDeleted")
                 this.services[section] = this.services[section].filter(f=>f.isDeleted==false)
