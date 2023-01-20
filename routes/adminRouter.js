@@ -54,7 +54,6 @@ router.get('/videos',adminAuth, async (req, res, next)=> {
   res.json(r)
 });
 router.post('/video',adminAuth, async (req, res, next)=> {
-  //
   let find={id:req.body.id}
   if(req.body._id)
     find={_id:ObjectId(req.body._id)}

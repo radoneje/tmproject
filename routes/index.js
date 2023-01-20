@@ -3,6 +3,7 @@ const router = express.Router();
 const moment=require("moment")
 const path = require("path");
 const fs = require("fs");
+const {ObjectId} = require('mongodb');
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
@@ -31,6 +32,10 @@ router.get('/file/:filename', async function(req, res, next) {
 
   var filestream = fs.createReadStream(file);
   filestream.pipe(res);
+});
+router.get('/video/:_id', async (req, res, next)=> {
+  let video =  await req.db.collection('videos').findOne({_id:ObjectId(req.params._id)})
+  res.render("video", video)
 });
 
 module.exports = router;

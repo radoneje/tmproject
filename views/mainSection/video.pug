@@ -10,7 +10,7 @@
             </svg>
     .videoWr.flex.between
             each video in videos
-                .videoItem.pointer
+                .videoItem.pointer(onclick="showVideo('"+video._id+"')")
                     .videoImageWr
                         .videoImage(style="background-image: url("+video.imageLink+");")
                         .videoHover.flex.center
