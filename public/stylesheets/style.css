@@ -486,4 +486,7 @@ h4 {
     line-height: 27px;
     color: #666E74;
 }
+.sectionItem{
+    align-items: baseline;
+}
 
