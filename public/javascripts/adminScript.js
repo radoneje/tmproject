@@ -14,7 +14,7 @@ let app=new Vue({
             await this.saveService(section, item)
             if(prm="isDeleted")
                 this.services[section] = this.services[section].filter(f=>f.isDeleted==false)
-            this.$forceUpdate();
+            //this.$forceUpdate();
         },
         saveService:async function(section, item){
             await axios.post("/admin/saveService", {section, item});
