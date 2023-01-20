@@ -74,7 +74,7 @@ block content
                         .aServItem(v-for="sect in commands")
                             .btn.btn-secondary.btn-sm.mb-3(v-on:click="addGeografy(sect.id)") Добавить заголовок
                             .aServItemBox(v-for="item in geografy[sect.id]")
-                                    .input-group(v-for="item in geografy[sect.id]")
+                                    .input-group
                                         span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleGeografy(sect.id, item,'isActive')")
                                             iconify-icon.green(icon="bi:lightbulb")
                                         span.input-group-text.pointer(v-else v-on:click="toggleGeografy(sect.id, item,'isActive')")
