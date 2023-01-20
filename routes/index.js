@@ -5,7 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const {ObjectId} = require('mongodb');
 const sections=[{t:"Профиль деятельности", id:"profiles", color:"#40CFF9"},{t:"Услуги", id:"services", color:"#F21A05"},{t:"Форматы", id:"formats", color:"#6944F0"}]
-
+const commands=[{t:"1", id:"spec"},{t:"2", id:"russia"},{t:"3", id:"word"}]
 /* GET home page. */
 router.get('/', async function(req, res, next) {
 
@@ -26,6 +26,10 @@ router.get('/', async function(req, res, next) {
 router.get('/sections', async function(req, res, next) {
   res.json(sections)
 })
+router.get('/commands', async function(req, res, next) {
+  res.json(commands)
+})
+
 
 router.get('/file/:filename', async function(req, res, next) {
 

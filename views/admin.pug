@@ -57,7 +57,6 @@ block content
                                     iconify-icon(icon="bi:trash")
                 div(v-if="section==2")
                     .aServBox.flex.between
-
                             .aServItem(v-for="sect in sections")
                                 .aServItemTitle {{sect.t}}
                                 .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить
@@ -70,7 +69,19 @@ block content
                                         input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                         span.input-group-text.pointer.red(v-on:click="toggleService(sect.id, item, 'isDeleted')")
                                             iconify-icon.red(icon="bi:trash")
-
+                div(v-if="section==3")
+                    .aServBox.flex.between
+                        .aServItem(v-for="sect in commands")
+                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить заголовок
+                            .aServItemBox
+                                .input-group.mb-3(v-for="item in services[sect.id]")
+                                    span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleService(sect.id, item,'isActive')")
+                                        iconify-icon.green(icon="bi:lightbulb")
+                                    span.input-group-text.pointer(v-else v-on:click="toggleService(sect.id, item,'isActive')")
+                                        iconify-icon.red(icon="bi:lightbulb-off")
+                                    input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
+                                    span.input-group-text.pointer.red(v-on:click="toggleService(sect.id, item, 'isDeleted')")
+                                        iconify-icon.red(icon="bi:trash")
 
 
 block footer

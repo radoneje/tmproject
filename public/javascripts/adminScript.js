@@ -5,7 +5,9 @@ let app=new Vue({
         general:{mainImgUrl:null},
         videos:[],
         sections:[],
-        services:{}
+        services:{},
+        commands:[],
+        geografy:[]
     },
     methods:{
         toggleService:async function(section, item, prm){
@@ -111,11 +113,19 @@ let app=new Vue({
                 this.$forceUpdate();
 
             }
+            if(this.section==3){
+                for(sect of this.commands){
+                    this.geografy[sect.id]= (await axios.get("/admin/service/"+sect.id)).data;
+                }
+                this.$forceUpdate();
+            }
         }
     },
     mounted:async function(){
         console.log("worked!")
         this.sections=(await axios.get("/sections")).data;
+        this.commands=(await axios.get("/commands")).data;
+
         this.general=(await axios.get("/admin/general")).data;
         console.log(this.general)
     }
