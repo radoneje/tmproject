@@ -9,7 +9,9 @@ router.get('/', async function(req, res, next) {
 
   let ret =  await req.db.collection('general').findOne({id:"facts"})
   let facts=ret.value;
-  res.render('index', { title: 'Express', year:moment().format("YYYY"), facts });
+  let videos=await req.db.collection('videos').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  videos=reverse.reverse();
+  res.render('index', { videos, facts , year:moment().format("YYYY")});
 });
 router.get('/file/:filename', async function(req, res, next) {
 

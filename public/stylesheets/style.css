@@ -303,3 +303,13 @@ h4{
 }
 .aVideoItem.active
 {background: #19875436;}
+.videoWr{
+
+}
+.videoItem{
+  width: calc(33.3333% - 12px);
+  margin-bottom: 24px;
+  background-color: #F8F6FE;
+}
+.videoImageWr{}
+.videoImage{}
