@@ -286,6 +286,15 @@ h4{
   border-radius: 4px;
   position: relative;
 }
+.aVideoItemImgBox{
+ position: absolute;
+  top:0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-size: cover;
+  border-radius: 4px;
+}
 .aVideoBox{
   display: flex;
   flex-wrap: wrap;
