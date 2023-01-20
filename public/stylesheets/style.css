@@ -435,7 +435,10 @@ h4 {
 .aServItem{
     width: calc(33% - 12px);
     box-sizing: border-box;
-    border-radius: 12px;
+    border-radius: 8px;
     border:1px solid gray;
-    padding: 24px;
+    padding: 24px 12px;
+}
+.aServItemBox{
+    padding: 12px 0;
 }
