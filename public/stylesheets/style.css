@@ -61,6 +61,10 @@ p{
   align-items: center;
   justify-content: center;
 }
+.flex.left{
+  align-items: center;
+  justify-content: left;
+}
 
 .foolerContact {
   margin-left: 34px;
