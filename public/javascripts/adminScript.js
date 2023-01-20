@@ -13,7 +13,10 @@ let app=new Vue({
         },
         addService:async function(section){
 
-            await axios.post("/admin/addService", {section});
+            let r=await axios.post("/admin/addService", {section});
+            if(!this.services[section])
+                this.services[section]=[];
+            this.services[section].unshift(r);
         },
         addImageVideo:async function(item){
             await this.uploadFile(async (r)=>{
