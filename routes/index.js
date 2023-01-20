@@ -17,7 +17,7 @@ router.get('/', async function(req, res, next) {
   let services={}
   for(let sect of sections){
 
-    let r=await req.db.collection(sect.id).find({isDeleted:false},{sort: { id: 1 },}).toArray();
+    let r=await req.db.collection(sect.id).find({isDeleted:false, isAcrive:true},{sort: { id: 1 },}).toArray();
     services[sect.id]= r.reverse()
   }
 
