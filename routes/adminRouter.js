@@ -56,6 +56,7 @@ router.post('/video',adminAuth, async (req, res, next)=> {
   delete req.body._id;
   let r=await req.db.collection('videos').updateOne({id:req.body.id},{$set: req.body});
   console.log(r);
+  console.log(req.body);
   res.json(r)
 });
 
