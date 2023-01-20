@@ -5,6 +5,7 @@ const showVideo=async(_id)=>{
         elem.classList.add("fullScreenWr");
         elem.innerHTML=await response.text();
         document.body.style.overflow="hidden";
+        document.body.appendChild(elem)
 
     }
 }
