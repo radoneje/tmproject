@@ -288,3 +288,5 @@ h4{
   justify-content: space-between;
   align-items: center;
 }
+.aVideoItem.active
+{background: #19875436;}
