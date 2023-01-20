@@ -67,10 +67,10 @@ let app=new Vue({
     },
     watch:{
         section:async function(){
-            if(section==0){
+            if(this.section==0){
                 this.general=(await axios.get("/admin/general")).data;
             }
-            if(section==1){
+            if(this.section==1){
                 this.videos=(await axios.get("/admin/videos")).data;
             }
         }
