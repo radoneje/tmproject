@@ -40,7 +40,7 @@ block content
                 div(v-if="section==1")
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить видео
                 .aVideoBox
-                    .aVideoItem(v-for="item in videos")
+                    .aVideoItem(v-for="item in videos" v-bind:class="{active:item.isActive}")
                         .aVideoItemImg.flex.center
                             div Вставьте изображение
                         input.form-control.form-control-sm.mt-2.mb-2(v-model="item.YTlink" placeholder="YouTube link" v-on:change="saveVideo(item)")
