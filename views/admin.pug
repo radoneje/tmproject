@@ -89,7 +89,7 @@ block content
                                                 iconify-icon.green(icon="bi:lightbulb")
                                             span.input-group-text.pointer(v-else v-on:click="toggleRecord(sect.id, item,record,'isActive')")
                                                 iconify-icon.red(icon="bi:lightbulb-off")
-                                            input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id)" )
+                                            input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                             span.input-group-text.pointer.red(v-on:click="toggleRecord(sect.id, item,record, 'isDeleted')")
                                                 iconify-icon.red(icon="bi:trash")
 
