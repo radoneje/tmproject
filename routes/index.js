@@ -20,8 +20,14 @@ router.get('/', async function(req, res, next) {
     let r=await req.db.collection(sect.id).find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
     services[sect.id]= r.reverse()
   }
+  let geografy={}
+  for(let sect of commands){
 
-  res.render('index', { videos, facts ,sections,services, year:moment().format("YYYY")});
+    let r=await req.db.collection(sect.id).find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
+    geografy[sect.id]= r.reverse()
+  }
+
+  res.render('index', { videos, facts ,sections,services,commands,geografy, year:moment().format("YYYY")});
 });
 router.get('/sections', async function(req, res, next) {
   res.json(sections)

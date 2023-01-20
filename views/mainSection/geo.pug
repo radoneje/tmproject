@@ -1,0 +1,21 @@
+.mainTower
+    .sectionHeader.withSub.flex.left
+        .sectionHeaderTitle Команда и география проектов
+        .sectionHeaderIcon
+            <svg width="91" height="76" viewBox="0 0 91 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M75 44.5C75 61.0685 61.5685 74.5 45 74.5C28.4315 74.5 15 61.0685 15 44.5C15 27.9315 28.4315 14.5 45 14.5C61.5685 14.5 75 27.9315 75 44.5Z" stroke="#D2C7FB" stroke-width="3"/>
+            <path d="M31 53C31 61.0081 24.5081 67.5 16.5 67.5C8.49187 67.5 2 61.0081 2 53C2 44.9919 8.49187 38.5 16.5 38.5C24.5081 38.5 31 44.9919 31 53Z" fill="#6944F0" stroke="white" stroke-width="3"/>
+            <path d="M89 53C89 61.0081 82.5081 67.5 74.5 67.5C66.4919 67.5 60 61.0081 60 53C60 44.9919 66.4919 38.5 74.5 38.5C82.5081 38.5 89 44.9919 89 53Z" fill="#1A0959" stroke="white" stroke-width="3"/>
+            <path d="M59 16C59 24.0081 52.5081 30.5 44.5 30.5C36.4919 30.5 30 24.0081 30 16C30 7.99187 36.4919 1.5 44.5 1.5C52.5081 1.5 59 7.99187 59 16Z" fill="#F21A05" stroke="white" stroke-width="3"/>
+            </svg>
+
+    .videoWr.flex.between
+            each sect in commands
+                .section
+                    .sectionWr
+                        each item in geografy[sect.id]
+                            .geografyText #{item.title}
+
+
+
+
