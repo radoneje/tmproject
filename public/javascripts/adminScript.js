@@ -10,6 +10,14 @@ let app = new Vue({
         geografy: {}
     },
     methods: {
+        toggleRecord:async function (section, item, record, prm) {
+            record[prm] = !record[prm];
+
+            await this.saveService(section, item)
+            if (prm == "isDeleted")
+                item.items = item.items.filter(f => !f.isDeleted)
+            this.$forceUpdate();
+        },
         addGeoItem: async function (section, item) {
             item.items.unshift({
                 id:(new Date()).toString(),
