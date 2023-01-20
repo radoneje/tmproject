@@ -6,11 +6,14 @@ let app=new Vue({
         videos:[]
     },
     methods:{
+        changeVideoActive:async function(item){
+            item.isActive=!itemisActive;
+            await this.saveVideo(item)
+        },
         saveVideo:async function(item){
             await axios.post("/admin/video", item)
         },
         videoAdd:async function(){
-
             let r=await axios.post("/admin/videoAdd")
             this.videos.unshift(r.data)
         },
