@@ -15,10 +15,10 @@
                     .sectionTitleWr.flex
                         .sectionTitleDecor(style="background:"+sect.color)
                         .sectionTitle #{sect.t}
-                    .sectionWr !{JSON.stringify(services)}
+                    .sectionWr
                         each item in services[sect.id]
                             .sectionItem.flex
-                                .sectionItemDecor
+                                .sectionItemDecor(style="background:"+sect.color)
                                 .sectionItemText #{item.title}
 
 
