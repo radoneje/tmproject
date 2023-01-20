@@ -287,7 +287,7 @@ h4 {
 .sectionHeader {
     margin-bottom: 39px;
 }
-.sectionHeader .withSub{
+.sectionHeader.withSub{
     margin-bottom: 12px;
 }
 .sectionHeaderSubTitle{
