@@ -4,7 +4,7 @@ const moment=require("moment")
 const path = require("path");
 const fs = require("fs");
 const {ObjectId} = require('mongodb');
-const sections=[{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}]
+const sections=[{t:"Профиль деятельности", id:"profiles", color:"#40CFF9"},{t:"Услуги", id:"services", color:"#F21A05"},{t:"Форматы", id:"formats", color:"#6944F0"}]
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
