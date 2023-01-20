@@ -15,6 +15,12 @@
                     .sectionWr
                         each item in geografy[sect.id]
                             .geografyText #{item.title}
+                            .geografyWr
+                                each record in item.items
+                                    if record.isActive
+                                        .geografyItem.flex
+                                            .geografyItemDecor
+                                            .geografyItemText #{record.title}
 
 
 

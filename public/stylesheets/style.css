@@ -499,4 +499,24 @@ h4 {
     line-height: 27px;
     margin-bottom: 12px;
 }
+.geografyWr{
+
+}
+.geografyItem{
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 16px;
+    align-items: baseline;
+}
+.geografyItemText{
+    margin-left: 12px;
+}
+.geografyItemDecor{
+    width: 10px;
+    height: 10px;
+    background: #8769F3;
+    border-radius: 50%;
+}
 
