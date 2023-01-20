@@ -57,25 +57,18 @@ block content
                                     iconify-icon(icon="bi:trash")
                 div(v-if="section==2")
                     .aServBox.flex.between
-                        .aServItem
-                            .aServItemTitle Профиль деятельности
-                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить
-                            .aServItemBox
-                                .input-group.mb-3
-                                    span.input-group-text.pointer
-                                        iconify-icon(icon="bi:lightbulb-off")
-                                    input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList('profiles')" )
-                                    span.input-group-text.pointer(v-on:click="uploadMainImage()")
-                                        iconify-icon(icon="bi:trash")
+                        each sect in [{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}]
+                            .aServItem
+                                .aServItemTitle #{sect.t}
+                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить
+                                .aServItemBox
+                                    .input-group.mb-3
+                                        span.input-group-text.pointer //.red .green
+                                            iconify-icon(icon="bi:lightbulb-off")
+                                        input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList('+sect.id+')" )
+                                        span.input-group-text.pointer.red(v-on:click="uploadMainImage()")
+                                            iconify-icon(icon="bi:trash")
 
-                        .aServItem
-                            .aServItemTitle Услуги
-                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить
-                            .aServItemBox
-                        .aServItem
-                            .aServItemTitle Форматы
-                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить
-                            .aServItemBox
 
 
 block footer

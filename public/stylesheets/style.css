@@ -442,3 +442,11 @@ h4 {
 .aServItemBox{
     padding: 12px 0;
 }
+.red{
+    background: #dc3545;
+    color: white;
+}
+.green {
+    background:  #198754;
+    color: white;
+}
