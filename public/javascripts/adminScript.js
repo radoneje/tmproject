@@ -6,6 +6,12 @@ let app=new Vue({
         videos:[]
     },
     methods:{
+        addImageVideo:async function(item){
+            await this.uploadFile(async (r)=>{
+                item.imageLink=r;
+                await this.saveVideo(item);
+            })
+        },
         deleteVideo:async function(item){
             if(!confirm("Вы уверены?"))
                 return
