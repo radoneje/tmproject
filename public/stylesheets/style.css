@@ -488,5 +488,6 @@ h4 {
 }
 .sectionItem{
     align-items: baseline;
+    margin-bottom: 8px;
 }
 
