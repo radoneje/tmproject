@@ -62,10 +62,10 @@ block content
                                 .aServItemTitle {{sect.t}}
                                 .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить
                                 .aServItemBox
-                                    .input-group.mb-3
+                                    .input-group.mb-3(v-for="item in services[sect.id]")
                                         span.input-group-text.pointer //.red .green
                                             iconify-icon(icon="bi:lightbulb-off")
-                                        input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList(sect.id)" )
+                                        input( type="text" v-model="item.text" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                         span.input-group-text.pointer.red(v-on:click="uploadMainImage()")
                                             iconify-icon.red(icon="bi:trash")
 

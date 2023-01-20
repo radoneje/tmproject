@@ -86,6 +86,15 @@ router.get('/service/:section',adminAuth, async (req, res, next)=> {
   r=r.reverse()
   res.json(r)
 });
+router.post('/saveService/:section',adminAuth, async (req, res, next)=> {
+  let find={_id:ObjectId(req.body.item._id)}
+  delete req.body.item._id;
+  let r=await req.db.collection('videos').updateOne(find,{$set: req.body.item});
+
+  return res.json(r)
+});
+
+
 
 
 module.exports = router;

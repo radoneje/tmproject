@@ -8,6 +8,9 @@ let app=new Vue({
         services:{}
     },
     methods:{
+        saveService:async function(section, item){
+            await axios.post("/admin/saveService", {section, item});
+        },
         addService:async function(section){
 
             await axios.post("/admin/addService", {section});
