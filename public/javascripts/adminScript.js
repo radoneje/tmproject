@@ -70,6 +70,9 @@ let app=new Vue({
             if(section==0){
                 this.general=(await axios.get("/admin/general")).data;
             }
+            if(section==1){
+                this.videos=(await axios.get("/admin/videos")).data;
+            }
         }
     },
     mounted:async function(){
