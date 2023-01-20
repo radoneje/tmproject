@@ -64,7 +64,7 @@ block content
                                 .input-group.mb-3
                                     span.input-group-text.pointer
                                         iconify-icon(icon="bi:lightbulb-off")
-                                    input( type="text" class="form-control"  placeholder="Введите текст" v-model="" v-on:change="saveList('profiles')" )
+                                    input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList('profiles')" )
                                     span.input-group-text.pointer(v-on:click="uploadMainImage()")
                                         iconify-icon(icon="bi:trash")
 
