@@ -454,4 +454,5 @@ h4 {
     border: 2px solid #F0ECFE;
     border-radius: 12px;
     padding: 32px 40px;
+    width: calc(33.333% - 12px);
 }
