@@ -284,6 +284,7 @@ h4{
   height: 180px;
   background: #cccccc;
   border-radius: 4px;
+  position: relative;
 }
 .aVideoBox{
   display: flex;
