@@ -269,3 +269,16 @@ h4{
   line-height: 54px;
   margin-right: 32px;
 }
+.aVideoItem{
+  border: 1px solid #096cff5e;
+  padding: 12px;
+  border-radius: 8px;
+  width: min-content;
+  margin-bottom: 24px;
+}
+.aVideoItemImg{
+  width: 320px;
+  height: 240px;
+  background: #cccccc;
+  border-radius: 4px;
+}

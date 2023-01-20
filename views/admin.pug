@@ -43,8 +43,8 @@ block content
                     .aVideoItem(v-for="item in videos")
                         .aVideoItemImg.flex.center
                             div Вставьте изображение
-                        input.form-control.form-control-sm(v-model="item.YTlink")
-                        .btn-group
+                        input.form-control.form-control-sm.mt-2.mb-2(v-model="item.YTlink" placeholder="YouTube link")
+                        .btn-group.flex.left
                             .btn.btn-secondary.btn-sm
                                 iconify-icon(icon="bi:lightbulb-off")
                             .btn.btn-secondary.btn-sm
