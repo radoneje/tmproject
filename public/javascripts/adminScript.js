@@ -8,6 +8,13 @@ let app=new Vue({
         services:{}
     },
     methods:{
+        toggleService:async function(section, item, prm){
+            item[item]=!item[prm];
+            await saveService(section, item)
+            if(prm="isDeleted")
+                this.services[section] = this.services[section].filter(f=>f.isDeleted==false)
+            this.$forceUpdate();
+        },
         saveService:async function(section, item){
             await axios.post("/admin/saveService", {section, item});
         },
