@@ -79,12 +79,19 @@ block content
                                             iconify-icon.green(icon="bi:lightbulb")
                                         span.input-group-text.pointer(v-else v-on:click="toggleGeografy(sect.id, item,'isActive')")
                                             iconify-icon.red(icon="bi:lightbulb-off")
-                                        input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
+                                        input( type="text" v-model="item.title" class="form-control"  placeholder="Введите название группы"  v-on:change="saveService(sect.id, item)" style="font-weight:bold" )
                                         span.input-group-text.pointer.red(v-on:click="toggleGeografy(sect.id, item, 'isDeleted')")
                                             iconify-icon.red(icon="bi:trash")
                                     .btn.btn-secondary.btn-sm.mb-1(v-on:click="addGeoItem(sect.id, item)") Добавить запись
                                     .geoWr.mb3
-                                        .input-group(v-for="record in item.items") 111
+                                        .input-group(v-for="record in item.items")
+                                            span.input-group-text.pointer(v-if="record.isActive" v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                                iconify-icon.green(icon="bi:lightbulb")
+                                            span.input-group-text.pointer(v-else v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                                iconify-icon.red(icon="bi:lightbulb-off")
+                                            input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
+                                            span.input-group-text.pointer.red(v-on:click="toggleGeografy(sect.id, item, 'isDeleted')")
+                                                iconify-icon.red(icon="bi:trash")
 
 
 
