@@ -17,6 +17,7 @@ let app=new Vue({
             if(!this.services[section])
                 this.services[section]=[];
             this.services[section].unshift(r);
+            this.$forceUpdate();
         },
         addImageVideo:async function(item){
             await this.uploadFile(async (r)=>{
