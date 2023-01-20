@@ -256,3 +256,12 @@ h4{
 .img-thumbnail{
   width: 150px;
 }
+.sectionHeader{
+  margin-bottom: 39px;
+}
+.sectionHeaderTitle{
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 54px;
+  margin-right: 32px;
+}
