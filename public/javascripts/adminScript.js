@@ -6,6 +6,9 @@ let app=new Vue({
         videos:[]
     },
     methods:{
+        saveVideo:async function(item){
+            await axios.post("/admin/video", item)
+        },
         videoAdd:async function(){
             await axios.post("/admin/videoAdd")
         },
@@ -48,17 +51,6 @@ let app=new Vue({
                    console.warn(e)
                    alert("Ошибка HTTP ");
                }
-              /* const response = await fetch('/admin/uploadFile', {
-                   method: 'POST',
-                   body: fd
-               })
-               if (response.ok) { // если HTTP-статус в диапазоне 200-299
-                                  // получаем тело ответа (см. про этот метод ниже)
-                   let json = await response.json();
-                   console.log(json)
-               } else {
-
-               }*/
            }
            input.style.display="none"
            input.click();

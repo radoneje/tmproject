@@ -51,6 +51,11 @@ router.get('/videos',adminAuth, async (req, res, next)=> {
   let r=await req.db.collection('videos').find({isDeleted:false}).toArray();
   res.json(r)
 });
+router.post('/video',adminAuth, async (req, res, next)=> {
+  delete req.body._id;
+  let r=await req.db.collection('videos').updateOne({id:req.body.id},req.body);
+  res.json(r)
+});
 
 
 
