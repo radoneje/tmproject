@@ -44,13 +44,14 @@ block content
                         .aVideoItemImg.flex.center
                             div Вставьте изображение
                         input.form-control.form-control-sm.mt-2.mb-2(v-model="item.YTlink" placeholder="YouTube link" v-on:change="saveVideo(item)")
-                        .btn-group.flex.left
-                            .btn.btn-danger.btn-sm(v-if="!item.isActive" v-on:click="changeVideoActive(item)")
-                                iconify-icon(icon="bi:lightbulb-off")
-                            .btn.btn-success.btn-sm(v-else v-on:click="changeVideoActive(item)")
-                                iconify-icon(icon="bi:lightbulb")
-                            .btn.btn-secondary.btn-sm
-                                iconify-icon(icon="bi:image")
+                        .flex.between
+                            .btn-group.flex.left
+                                .btn.btn-danger.btn-sm(v-if="!item.isActive" v-on:click="changeVideoActive(item)")
+                                    iconify-icon(icon="bi:lightbulb-off")
+                                .btn.btn-success.btn-sm(v-else v-on:click="changeVideoActive(item)")
+                                    iconify-icon(icon="bi:lightbulb")
+                                .btn.btn-secondary.btn-sm
+                                    iconify-icon(icon="bi:image")
                             .btn.btn-danger.btn-sm(v-on:click="deleteVideo(item)")
                                 iconify-icon(icon="bi:trash")
 

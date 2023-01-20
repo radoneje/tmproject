@@ -65,6 +65,9 @@ p{
   align-items: center;
   justify-content: left;
 }
+.flex.between{
+  justify-content:space-between;
+}
 
 .foolerContact {
   margin-left: 34px;
