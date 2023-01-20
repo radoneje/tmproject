@@ -59,13 +59,13 @@ block content
                     .aServBox.flex.between
 
                             .aServItem(v-for="sect in sections")
-                                .aServItemTitle #{sect.t}
-                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService('"+sect.id+"')") Добавить
+                                .aServItemTitle {{sect.t}}
+                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить
                                 .aServItemBox
                                     .input-group.mb-3
                                         span.input-group-text.pointer //.red .green
                                             iconify-icon(icon="bi:lightbulb-off")
-                                        input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList('+sect.id+')" )
+                                        input( type="text" class="form-control"  placeholder="Введите текст"  v-on:change="saveList(sect.id)" )
                                         span.input-group-text.pointer.red(v-on:click="uploadMainImage()")
                                             iconify-icon.red(icon="bi:trash")
 
