@@ -45,9 +45,9 @@ block content
                             div Вставьте изображение
                         input.form-control.form-control-sm.mt-2.mb-2(v-model="item.YTlink" placeholder="YouTube link")
                         .btn-group.flex.left
-                            .btn.btn-secondary.btn-sm
+                            .btn.btn-danger.btn-sm(v-if="!item.isActive")
                                 iconify-icon(icon="bi:lightbulb-off")
-                            .btn.btn-secondary.btn-sm
+                            .btn.btn-success.btn-sm(v-else)
                                 iconify-icon(icon="bi:lightbulb")
                             .btn.btn-secondary.btn-sm
                                 iconify-icon(icon="bi:image")
