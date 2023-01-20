@@ -450,3 +450,8 @@ h4 {
     color:  #198754;
 
 }
+.section{
+    border: 2px solid #F0ECFE;
+    border-radius: 12px;
+    padding: 32px 40px;
+}
