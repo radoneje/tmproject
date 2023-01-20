@@ -34,8 +34,8 @@ router.get('/file/:filename', async function(req, res, next) {
   filestream.pipe(res);
 });
 router.get('/video/:_id', async (req, res, next)=> {
- // let video =  await req.db.collection('videos').findOne({_id:ObjectId(req.params._id)})
-  res.render("video", {video:{}})
+  let video =  await req.db.collection('videos').findOne({_id:ObjectId(req.params._id)})
+  res.render("video", {video})
 });
 
 module.exports = router;
