@@ -367,4 +367,9 @@ h4 {
     height: 100%;
     background: rgba(0,0,0,0.5);
     border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.videoHover:hover{
+    opacity: 1;
 }
