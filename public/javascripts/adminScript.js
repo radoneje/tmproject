@@ -8,8 +8,8 @@ let app=new Vue({
     },
     methods:{
         addService:async function(section){
-            console.log("f",section)
-            await axios.post("/admin/addService", section);
+
+            await axios.post("/admin/addService", {section});
         },
         addImageVideo:async function(item){
             await this.uploadFile(async (r)=>{
