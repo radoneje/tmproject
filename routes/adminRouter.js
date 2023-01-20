@@ -77,7 +77,7 @@ router.post('/addService',adminAuth, async (req, res, next)=> {
     isActive:false,
     isDeleted:false
   }
-  let r=await req.db.collection(req.body).insertOne(item);
+  let r=await req.db.collection(req.body.section).insertOne(item);
   res.json({item, r})
 });
 
