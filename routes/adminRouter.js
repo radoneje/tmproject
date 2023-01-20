@@ -48,7 +48,8 @@ router.post('/videoAdd',adminAuth, async (req, res, next)=> {
   res.json(item)
 });
 router.get('/videos',adminAuth, async (req, res, next)=> {
-  let r=await req.db.collection('videos').find({isDeleted:false}).toArray();
+  let r=await req.db.collection('videos').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  r=r.reverse()
   res.json(r)
 });
 router.post('/video',adminAuth, async (req, res, next)=> {
