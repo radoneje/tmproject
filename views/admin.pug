@@ -84,7 +84,7 @@ block content
                                             iconify-icon.red(icon="bi:trash")
                                     .btn.btn-secondary.btn-sm.mb-1(v-on:click="addGeoItem(sect.id, item)") Добавить запись
                                     .geoWr.mb3
-                                        .input-group(v-for="record in item.items")
+                                        .input-group(v-for="record in item.items" v-if="!record.isDeleted")
                                             span.input-group-text.pointer(v-if="record.isActive" v-on:click="toggleRecord(sect.id, item,record,'isActive')")
                                                 iconify-icon.green(icon="bi:lightbulb")
                                             span.input-group-text.pointer(v-else v-on:click="toggleRecord(sect.id, item,record,'isActive')")
