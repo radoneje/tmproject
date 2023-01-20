@@ -82,7 +82,7 @@ block content
                                         input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                         span.input-group-text.pointer.red(v-on:click="toggleGeografy(sect.id, item, 'isDeleted')")
                                             iconify-icon.red(icon="bi:trash")
-                                    .btn.btn-secondary.btn-sm.mb-3(v-on:click="addGeoItem(sect.id, item)") Добавить запись
+                                    .btn.btn-secondary.btn-sm.mb-1(v-on:click="addGeoItem(sect.id, item)") Добавить запись
                                     .geoWr.mb3
                                         .input-group(v-for="record in item.items") 111
 
