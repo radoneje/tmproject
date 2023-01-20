@@ -8,6 +8,10 @@ const showVideo=async(_id)=>{
         elem.innerHTML=await response.text();
         document.body.style.overflow="hidden";
         document.body.appendChild(elem)
-
+        let btn=document.querySelector(".close")
+        btn.addEventListener("click",()=>{
+            document.body.removeChild(elem);
+            document.body.style.overflow=null;
+        })
     }
 }
