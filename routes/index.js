@@ -35,6 +35,7 @@ router.get('/file/:filename', async function(req, res, next) {
 });
 router.get('/video/:_id', async (req, res, next)=> {
   let video =  await req.db.collection('videos').findOne({_id:ObjectId(req.params._id)})
+  video.YTlink=video.YTlink.replace("https://youtu.be/","https://www.youtube.com/embed/")
   res.render("video", {video})
 });
 
