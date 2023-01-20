@@ -14,7 +14,12 @@ router.get('/', async function(req, res, next) {
   let videos=await req.db.collection('videos').find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
   videos=videos.reverse();
 
-  res.render('index', { videos, facts ,sections, year:moment().format("YYYY")});
+  let services={}
+  for(sect of sections){
+    services[sect.id]= (await axios.get("/admin/service/"+sect.id)).data;
+  }
+
+  res.render('index', { videos, facts ,sections,services, year:moment().format("YYYY")});
 });
 router.get('/sections', async function(req, res, next) {
   res.json(sections)

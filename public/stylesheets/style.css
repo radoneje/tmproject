@@ -459,6 +459,7 @@ h4 {
 }
 .sectionTitleWr{
     align-items: center;
+    margin-bottom: 12px;
 }
 .sectionTitleDecor{
     width: 40px;
@@ -476,6 +477,17 @@ h4 {
 
     /* Gray 2 */
 
+    color: #666E74;
+}
+.sectionItemDecor{
+    width: 10px;
+    height: 10px;
+    margin-right: 16px;
+}
+.sectionItemText{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
     color: #666E74;
 }
 

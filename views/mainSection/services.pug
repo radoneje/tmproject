@@ -15,6 +15,12 @@
                     .sectionTitleWr.flex
                         .sectionTitleDecor(style="background:"+sect.color)
                         .sectionTitle #{sect.t}
+                    .sectionWr
+                        each item in services[sect.id]
+                            .sectionItem.flex
+                                .sectionItemDecor
+                                .sectionItemText #{item.title}
+
 
 
 
