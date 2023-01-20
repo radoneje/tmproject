@@ -4,7 +4,8 @@ let app=new Vue({
         section:0,
         general:{mainImgUrl:null},
         videos:[],
-        services:[]
+        sections:[{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}],
+        services:{}
     },
     methods:{
         addService:async function(section){
@@ -87,6 +88,12 @@ let app=new Vue({
             }
             if(this.section==1){
                 this.videos=(await axios.get("/admin/videos")).data;
+            }
+            if(this.section==2){
+                for(sect of this.sections){
+                    this.services[sect.id]= (await axios.get("/admin/service/"+sect.id)).data;
+                }
+
             }
         }
     },

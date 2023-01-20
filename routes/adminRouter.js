@@ -43,7 +43,8 @@ router.post('/videoAdd',adminAuth, async (req, res, next)=> {
     YTlink:"",
     imageLink:"",
     isActive:false,
-    isDeleted:false
+    isDeleted:false,
+
   }
   await req.db.collection('videos').insertOne(item);
   res.json(item)
@@ -69,16 +70,21 @@ router.post('/video',adminAuth, async (req, res, next)=> {
 
 
 router.post('/addService',adminAuth, async (req, res, next)=> {
-
-
   let item={
     id:moment().unix(),
     title:"",
     isActive:false,
-    isDeleted:false
+    isDeleted:false,
   }
   let r=await req.db.collection(req.body.section).insertOne(item);
-  res.json({item, r})
+  item._id=r.insertedId;
+  res.json(item);
+});
+
+router.get('/service/:section',adminAuth, async (req, res, next)=> {
+  let r=await req.db.collection(req.params.section).find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  r=r.reverse()
+  res.json(r)
 });
 
 

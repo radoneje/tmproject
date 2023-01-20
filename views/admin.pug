@@ -57,7 +57,7 @@ block content
                                     iconify-icon(icon="bi:trash")
                 div(v-if="section==2")
                     .aServBox.flex.between
-                        each sect in [{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}]
+                        each sect in sections
                             .aServItem
                                 .aServItemTitle #{sect.t}
                                 .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService('"+sect.id+"')") Добавить
