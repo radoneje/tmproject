@@ -60,7 +60,7 @@ block content
                         each sect in [{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}]
                             .aServItem
                                 .aServItemTitle #{sect.t}
-                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить
+                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService('"+sect.id+"')") Добавить
                                 .aServItemBox
                                     .input-group.mb-3
                                         span.input-group-text.pointer //.red .green

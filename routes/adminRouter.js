@@ -68,5 +68,17 @@ router.post('/video',adminAuth, async (req, res, next)=> {
 
 
 
+router.post('/addService',adminAuth, async (req, res, next)=> {
+
+  let item={
+    id:moment().unix(),
+    title:"",
+    isActive:false,
+    isDeleted:false
+  }
+  let r=await req.db.collection(req.body).insertOne(item);
+  res.json({item, r})
+});
+
 
 module.exports = router;

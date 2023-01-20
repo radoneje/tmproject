@@ -3,9 +3,13 @@ let app=new Vue({
     data:{
         section:0,
         general:{mainImgUrl:null},
-        videos:[]
+        videos:[],
+        services:[]
     },
     methods:{
+        addService:async function(section){
+            await axios.post("/admin/addService", section);
+        },
         addImageVideo:async function(item){
             await this.uploadFile(async (r)=>{
                 item.imageLink=r;
