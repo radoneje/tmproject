@@ -4,7 +4,7 @@ let app=new Vue({
         section:0,
         general:{mainImgUrl:null},
         videos:[],
-        sections:[{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}],
+        sections:[],
         services:{}
     },
     methods:{
@@ -115,6 +115,7 @@ let app=new Vue({
     },
     mounted:async function(){
         console.log("worked!")
+        this.sections=(await axios.get("/sections")).data;
         this.general=(await axios.get("/admin/general")).data;
         console.log(this.general)
     }

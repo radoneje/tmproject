@@ -11,27 +11,6 @@
 
     .videoWr.flex.between
             each video in videos
-                .videoItem.pointer(onclick="showVideo('"+video._id+"')")
-                    .videoImageWr
-                        .videoImage(style="background-image: url("+video.imageLink+");")
-                        .videoHover.flex.center
-                            <svg width="48" height="43" viewBox="0 0 48 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_d_303_5656)">
-                            <path d="M0 19.8933C0 13.4271 0 10.194 1.29382 7.75081C2.29489 5.86046 3.81772 4.30995 5.67432 3.29068C8.07386 1.97333 11.2492 1.97333 17.6 1.97333H30.4C36.7508 1.97333 39.9261 1.97333 42.3257 3.29068C44.1823 4.30995 45.7051 5.86046 46.7062 7.75081C48 10.194 48 13.4271 48 19.8933V19.8933C48 26.3596 48 29.5927 46.7062 32.0358C45.7051 33.9262 44.1823 35.4767 42.3257 36.496C39.9261 37.8133 36.7508 37.8133 30.4 37.8133H17.6C11.2492 37.8133 8.07386 37.8133 5.67432 36.496C3.81772 35.4767 2.29489 33.9262 1.29382 32.0358C0 29.5927 0 26.3596 0 19.8933V19.8933Z" fill="white"/>
-                            </g>
-                            <path d="M33.84 19.7915C28.84 22.9275 23.96 25.9617 19 29.0773C19 22.8664 19 16.7777 19 10.5261C23.96 13.6213 28.84 16.6759 33.84 19.7915Z" fill="#F21A05"/>
-                            <defs>
-                            <filter id="filter0_d_303_5656" x="-3" y="0.973328" width="54" height="41.84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                            <feOffset dy="2"/>
-                            <feGaussianBlur stdDeviation="1.5"/>
-                            <feComposite in2="hardAlpha" operator="out"/>
-                            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_303_5656"/>
-                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_303_5656" result="shape"/>
-                            </filter>
-                            </defs>
-                            </svg>
+
 
 

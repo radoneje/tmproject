@@ -4,6 +4,7 @@ const moment=require("moment")
 const path = require("path");
 const fs = require("fs");
 const {ObjectId} = require('mongodb');
+const sections=[{t:"Профиль деятельности", id:"profiles"},{t:"Услуги", id:"services"},{t:"Форматы", id:"formats"}]
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
@@ -12,9 +13,13 @@ router.get('/', async function(req, res, next) {
   let facts=ret.value;
   let videos=await req.db.collection('videos').find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
   videos=videos.reverse();
-  console.log(videos)
+
   res.render('index', { videos, facts , year:moment().format("YYYY")});
 });
+router.get('/sections', async function(req, res, next) {
+res.json(sections)
+})
+
 router.get('/file/:filename', async function(req, res, next) {
 
   console.log(req.params.filename)
