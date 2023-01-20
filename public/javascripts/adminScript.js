@@ -13,7 +13,7 @@ let app=new Vue({
             console.log(item, prm)
             await this.saveService(section, item)
             if(prm=="isDeleted")
-                this.services[section] = this.services[section].filter(f=>f.isDeleted==false)
+                this.services[section] = this.services[section].filter(f=>!f.isDeleted)
             this.$forceUpdate();
         },
         saveService:async function(section, item){
