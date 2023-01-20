@@ -12,7 +12,7 @@ let app = new Vue({
     methods: {
         addGeoItem: async function (section, item) {
             item.items.unshift({
-                id:moment().unix(),
+                id:(new Date()).toString(),
                 title:"",
                 isActive:false,
                 isDeleted:false
