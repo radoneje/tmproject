@@ -82,8 +82,7 @@ block content
                                     input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                     span.input-group-text.pointer.red(v-on:click="toggleService(sect.id, item, 'isDeleted')")
                                         iconify-icon.red(icon="bi:trash")
-                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить запись
-                                    .geoWr
+
 
 
 block footer
