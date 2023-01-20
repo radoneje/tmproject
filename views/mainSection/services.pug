@@ -1,5 +1,5 @@
 .mainTower
-    .sectionHeader.flex.left
+    .sectionHeader.withSub.flex.left
         .sectionHeaderTitle Услуги
         .sectionHeaderIcon
             <svg width="55" height="52" viewBox="0 0 55 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,6 +8,7 @@
             <path opacity="0.7" d="M38.5 52C47.3366 52 54.5 44.8366 54.5 36C54.5 27.1634 47.3366 20 38.5 20C29.6634 20 22.5 27.1634 22.5 36C22.5 44.8366 29.6634 52 38.5 52Z" fill="#F21A05"/>
             </svg>
     .sectionHeaderSubTitle Мы предоставляем весь комплекс услуг в области Event, PR, корпоративных коммуникаций и издательской деятельности.
+
     .videoWr.flex.between
             each video in videos
                 .videoItem.pointer(onclick="showVideo('"+video._id+"')")
