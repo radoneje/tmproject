@@ -429,3 +429,13 @@ h4 {
 .close:hover{
     background: #B3B7B9;
 }
+.aServBox{
+
+}
+.aServItem{
+    width: calc(33% - 12px);
+    box-sizing: border-box;
+    border-radius: 12px;
+    border:1px solid gray;
+    padding: 24px;
+}
