@@ -10,7 +10,9 @@ let app=new Vue({
             await axios.post("/admin/video", item)
         },
         videoAdd:async function(){
-            await axios.post("/admin/videoAdd")
+
+            let r=await axios.post("/admin/videoAdd")
+            this.videos.unshift(r.data)
         },
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
