@@ -72,7 +72,7 @@ block content
                 div(v-if="section==3")
                     .aServBox.flex.between
                         .aServItem(v-for="sect in commands")
-                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить заголовок
+                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="addGeografy(sect.id)") Добавить заголовок
                             .aServItemBox
                                 .input-group(v-for="item in geografy[sect.id]")
                                     span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleGeografy(sect.id, item,'isActive')")

@@ -28,6 +28,13 @@ let app=new Vue({
         saveService:async function(section, item){
             await axios.post("/admin/saveService", {section, item});
         },
+        addGeografy:async function(section){
+            let r=await axios.post("/admin/addService", {section});
+            if(!this.geografy[section])
+                this.geografy[section]=[];
+            this.geografy[section].unshift(r);
+            this.$forceUpdate();
+        },
         addService:async function(section){
 
             let r=await axios.post("/admin/addService", {section});
