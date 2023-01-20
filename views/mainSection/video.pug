@@ -10,7 +10,8 @@
             </svg>
     .videoWr.flex.between
             each video in videos
-                .videoItem
+                .videoItem.pointer
                     .videoImageWr
                         .videoImage(style="background-image: url("+video.imageLink+");")
+                        .videoHover
 
