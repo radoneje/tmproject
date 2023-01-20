@@ -35,6 +35,19 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
   else res.sendStatus(404)
 
 });
+outer.post('/videoAdd',upload.single('card'), async (req, res, next)=> {
+
+  let item={
+    id:moment().unix(),
+    YTlink:"",
+    imageLink:"",
+    isActive:false,
+    isDeleted:false
+  }
+  await req.db.collection('videos').insertOne(item);
+  res.json(item)
+});
+
 
 
 module.exports = router;

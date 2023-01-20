@@ -2,9 +2,13 @@ let app=new Vue({
     el:"#app",
     data:{
         section:0,
-        general:{mainImgUrl:null}
+        general:{mainImgUrl:null},
+        videos:[]
     },
     methods:{
+        videoAdd:async function(){
+            await axios.post("/admin/videoAdd")
+        },
         saveGeneral:async function(){
             await axios.post("/admin/general",this.general )
         },
