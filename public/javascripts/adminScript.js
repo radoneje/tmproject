@@ -6,6 +6,13 @@ let app=new Vue({
         videos:[]
     },
     methods:{
+        deleteVideo:async function(item){
+            if(!confirm("Вы уверены?"))
+                return
+            item.isDeleted= new Date().toISOString();
+            await this.saveVideo(item);
+            this.videos=this.videos.filter(v=>v.id!=item.id);
+        },
         changeVideoActive:async function(item){
             item.isActive=!item.isActive;
             await this.saveVideo(item)
