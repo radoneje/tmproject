@@ -35,7 +35,7 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
   else res.sendStatus(404)
 
 });
-outer.post('/videoAdd',upload.single('card'), async (req, res, next)=> {
+router.post('/videoAdd',upload.single('card'), async (req, res, next)=> {
 
   let item={
     id:moment().unix(),
