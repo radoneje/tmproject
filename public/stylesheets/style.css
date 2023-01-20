@@ -382,3 +382,27 @@ h4 {
     position: fixed;
     background: rgba(64, 74, 81, 0.3);
 }
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.videoBox{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(64, 74, 81, 0.3);
+    border-radius: 16px;
+    box-sizing: border-box;
+    width: 110px;
+    padding: 48px 40px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #000000;
+}
