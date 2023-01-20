@@ -9,7 +9,7 @@ router.get('/', async function(req, res, next) {
 
   let ret =  await req.db.collection('general').findOne({id:"facts"})
   let facts=ret.value;
-  let videos=await req.db.collection('videos').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  let videos=await req.db.collection('videos').find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
   //videos=videos.reverse();
   console.log(videos)
   res.render('index', { videos, facts , year:moment().format("YYYY")});
