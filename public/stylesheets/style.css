@@ -373,3 +373,12 @@ h4 {
 .videoHover:hover{
     opacity: 1;
 }
+
+.fullScreenWr{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(64, 74, 81, 0.3);
+}
