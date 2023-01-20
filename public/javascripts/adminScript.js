@@ -96,6 +96,7 @@ let app=new Vue({
                 for(sect of this.sections){
                     this.services[sect.id]= (await axios.get("/admin/service/"+sect.id)).data;
                 }
+                this.sections=this.sections;
 
             }
         }
