@@ -7,7 +7,7 @@ let app=new Vue({
     },
     methods:{
         changeVideoActive:async function(item){
-            item.isActive=!itemisActive;
+            item.isActive=!item.isActive;
             await this.saveVideo(item)
         },
         saveVideo:async function(item){
