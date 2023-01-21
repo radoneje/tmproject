@@ -32,9 +32,15 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
     req.file.originalname = Buffer.from(req.file.originalname, 'latin1').toString('utf8')
     req.file.date=new Date();
     let ext=path.extname(req.file.originalname)
-    console.log(ext);
-    await req.db.collection('files').insertOne(req.file);
-    res.json("/uploads/"+req.file.filename)
+
+    fs.rename(req.file.path, req.file.path+ext, async()=>{
+      req.file.path=req.file.path+ext;
+      req.file.filename=req.file.filename+ext;
+      await req.db.collection('files').insertOne(req.file);
+      res.json("/uploads/"+req.file.filename)
+    });
+
+
   }
   else res.sendStatus(404)
 
