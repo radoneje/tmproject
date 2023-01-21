@@ -519,4 +519,7 @@ h4 {
     background: #8769F3;
     border-radius: 50%;
 }
+.admih h1, .admin h2, .admin h3, .admin h4{
+    color:#212529
+}
 
