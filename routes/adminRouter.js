@@ -37,7 +37,7 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
       req.file.path=req.file.path+ext;
       req.file.filename=req.file.filename+ext;
       await req.db.collection('files').insertOne(req.file);
-      if(req.file.mimetype.match(/^\/image\//)){
+      if(req.file.mimetype.match(/^image\//)){
         console.log("needConvet")
       }
       res.json("/uploads/"+req.file.filename)
