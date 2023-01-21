@@ -57,46 +57,48 @@ block content
                                     iconify-icon(icon="bi:trash")
                 div(v-if="section==2")
                     .aServBox.flex.between
-                            .aServItem(v-for="sect in sections")
-                                .aServItemTitle {{sect.t}}
-                                .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить
-                                .aServItemBox
-                                    .input-group.mb-3(v-for="item in services[sect.id]")
-                                        span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleService(sect.id, item,'isActive')")
-                                            iconify-icon.green(icon="bi:lightbulb")
-                                        span.input-group-text.pointer(v-else v-on:click="toggleService(sect.id, item,'isActive')")
-                                            iconify-icon.red(icon="bi:lightbulb-off")
-                                        input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
-                                        span.input-group-text.pointer.red(v-on:click="toggleService(sect.id, item, 'isDeleted')")
-                                            iconify-icon.red(icon="bi:trash")
+                        .aServItem(v-for="sect in sections")
+                            .aServItemTitle {{sect.t}}
+                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="addService(sect.id)") Добавить
+                            .aServItemBox
+                                .input-group.mb-3(v-for="item in services[sect.id]")
+                                    span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleService(sect.id, item,'isActive')")
+                                        iconify-icon.green(icon="bi:lightbulb")
+                                    span.input-group-text.pointer(v-else v-on:click="toggleService(sect.id, item,'isActive')")
+                                        iconify-icon.red(icon="bi:lightbulb-off")
+                                    input( type="text" v-model="item.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
+                                    span.input-group-text.pointer.red(v-on:click="toggleService(sect.id, item, 'isDeleted')")
+                                        iconify-icon.red(icon="bi:trash")
                 div(v-if="section==3")
                     .aServBox.flex.between
                         .aServItem(v-for="sect in commands")
                             .btn.btn-secondary.btn-sm.mb-3(v-on:click="addGeografy(sect.id)") Добавить заголовок
                             .aServItemBox(v-for="item in geografy[sect.id]")
-                                    .input-group
-                                        span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                .input-group
+                                    span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                        iconify-icon.green(icon="bi:lightbulb")
+                                    span.input-group-text.pointer(v-else v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                        iconify-icon.red(icon="bi:lightbulb-off")
+                                    input( type="text" v-model="item.title" class="form-control"  placeholder="Введите название группы"  v-on:change="saveService(sect.id, item)" style="font-weight:bold" )
+                                    span.input-group-text.pointer.red(v-on:click="toggleGeografy(sect.id, item, 'isDeleted')")
+                                        iconify-icon.red(icon="bi:trash")
+                                .btn.btn-secondary.btn-sm.mb-1(v-on:click="addGeoItem(sect.id, item)") Добавить запись
+                                .geoWr.mb3
+                                    .input-group(v-for="record in item.items" v-if="!record.isDeleted")
+                                        span.input-group-text.pointer(v-if="record.isActive" v-on:click="toggleRecord(sect.id, item,record,'isActive')")
                                             iconify-icon.green(icon="bi:lightbulb")
-                                        span.input-group-text.pointer(v-else v-on:click="toggleGeografy(sect.id, item,'isActive')")
+                                        span.input-group-text.pointer(v-else v-on:click="toggleRecord(sect.id, item,record,'isActive')")
                                             iconify-icon.red(icon="bi:lightbulb-off")
-                                        input( type="text" v-model="item.title" class="form-control"  placeholder="Введите название группы"  v-on:change="saveService(sect.id, item)" style="font-weight:bold" )
-                                        span.input-group-text.pointer.red(v-on:click="toggleGeografy(sect.id, item, 'isDeleted')")
+                                        input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
+                                        span.input-group-text.pointer.red(v-on:click="toggleRecord(sect.id, item,record, 'isDeleted')")
                                             iconify-icon.red(icon="bi:trash")
-                                    .btn.btn-secondary.btn-sm.mb-1(v-on:click="addGeoItem(sect.id, item)") Добавить запись
-                                    .geoWr.mb3
-                                        .input-group(v-for="record in item.items" v-if="!record.isDeleted")
-                                            span.input-group-text.pointer(v-if="record.isActive" v-on:click="toggleRecord(sect.id, item,record,'isActive')")
-                                                iconify-icon.green(icon="bi:lightbulb")
-                                            span.input-group-text.pointer(v-else v-on:click="toggleRecord(sect.id, item,record,'isActive')")
-                                                iconify-icon.red(icon="bi:lightbulb-off")
-                                            input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
-                                            span.input-group-text.pointer.red(v-on:click="toggleRecord(sect.id, item,record, 'isDeleted')")
-                                                iconify-icon.red(icon="bi:trash")
                 div(v-if="section==4")
                     h4 Логотипы клиентов
+
                     .input-group.mb-3
-                        span.Allparams.input-group-text Организованно мероприятий
-                        input( type="text" class="form-control"  placeholder="Введите число" v-model="general.projectCount" v-on:change="saveGeneral()" )
+                        span.Allparams.input-group-text Картинка лого клиентов (svg)
+                        input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="general.clientsLogoUrl" v-on:change=" saveGeneral()" )
+                        span.input-group-text.pointer(v-on:click="uploadClientsLogo()") <iconify-icon icon="bi:upload"></iconify-icon>
 
 
 block footer

@@ -95,6 +95,13 @@ let app = new Vue({
                 await this.saveGeneral()
             })
         },
+        uploadClientsLogo: async function () {
+
+            await this.uploadFile(async (r) => {
+                this.general.clientsLogoUrl = r;
+                await this.saveGeneral()
+            })
+        },
         uploadMainImage: async function () {
 
             await this.uploadFile(async (r) => {
