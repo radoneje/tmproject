@@ -522,4 +522,8 @@ h4 {
 .admih h1, .admin h2, .admin h3, .admin h4{
     color:#212529
 }
+.clientsImage{
+    width: 100%;
+    height: auto;
+}
 
