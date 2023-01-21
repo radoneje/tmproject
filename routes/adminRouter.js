@@ -4,6 +4,8 @@ const moment=require("moment")
 const multer  = require('multer')
 const upload = multer({dest: "public/uploads/"})
 const {ObjectId} = require('mongodb');
+const path=require("path")
+const fs=require("fs")
 
 const adminAuth=(req, res, next)=>{
   next()
@@ -29,7 +31,8 @@ router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
   if (req.file) {
     req.file.originalname = Buffer.from(req.file.originalname, 'latin1').toString('utf8')
     req.file.date=new Date();
-    console.log(req.file)
+    let ext=path.extname(req.file.originalname)
+    console.log(ext);
     await req.db.collection('files').insertOne(req.file);
     res.json("/uploads/"+req.file.filename)
   }
