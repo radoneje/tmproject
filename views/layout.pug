@@ -61,7 +61,10 @@ html(lang="ru")
                                 </clipPath>
                                 </defs>
                                 </svg>
-                                a(href="tel:+74955180910") +7(495) 518-0910
+                                if facts
+                                    a(href="mailto:" + facts.phone) #{facts.phone}
+                                else
+                                    a(href="tel:+74955180910") +7(495) 518-0910
 
 
                             .foolerContact.flex.center
@@ -76,7 +79,10 @@ html(lang="ru")
                                 </clipPath>
                                 </defs>
                                 </svg>
-                                a(href="mailto:info@tmproject.ru") info@tmproject.ru
+                                if facts
+                                    a(href="mailto:"+facts.email) #{facts.email}
+                                else
+                                    a(href="mailto:info@tmproject.ru") info@tmproject.ru
 
                 .footerImage
                     img(src="/images/footer.svg" alt="LOGO")

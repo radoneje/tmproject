@@ -17,6 +17,12 @@ block content
                 div(v-if="section==0")
                     h4 Общие параметры
                     .input-group.mb-3
+                        span.Allparams.input-group-text Email
+                        input( type="text" class="form-control"  placeholder="Введите Email" v-model="general.email" v-on:change="saveGeneral()" )
+                    .input-group.mb-3
+                        span.Allparams.input-group-text Телефон
+                        input( type="text" class="form-control"  placeholder="Введите телефон" v-model="general.phone" v-on:change="saveGeneral()" )
+                    .input-group.mb-3
                         span.Allparams.input-group-text Организованно мероприятий
                         input( type="text" class="form-control"  placeholder="Введите число" v-model="general.projectCount" v-on:change="saveGeneral()" )
                     .input-group.mb-3
