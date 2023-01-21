@@ -93,6 +93,7 @@ let app = new Vue({
             await this.uploadFile(async (r) => {
                 this.general.preza = r;
                 await this.saveGeneral()
+                this.$forceUpdate();
             })
         },
         uploadClientsLogo: async function () {
@@ -100,6 +101,7 @@ let app = new Vue({
             await this.uploadFile(async (r) => {
                 this.general.clientsLogoUrl = r;
                 await this.saveGeneral()
+                this.$forceUpdate();
             })
         },
         uploadMainImage: async function () {
@@ -107,6 +109,7 @@ let app = new Vue({
             await this.uploadFile(async (r) => {
                 this.general.mainImgUrl = r;
                 await this.saveGeneral()
+                this.$forceUpdate();
             })
         },
         uploadFile: async function (callBack) {
