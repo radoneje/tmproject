@@ -152,6 +152,9 @@ let app = new Vue({
                 }
                 this.$forceUpdate();
             }
+            if (this.section == 4) {
+                this.general = (await axios.get("/admin/general")).data;
+            }
         }
     },
     mounted: async function () {

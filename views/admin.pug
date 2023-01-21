@@ -92,7 +92,11 @@ block content
                                             input( type="text" v-model="record.title" class="form-control"  placeholder="Введите текст"  v-on:change="saveService(sect.id, item)" )
                                             span.input-group-text.pointer.red(v-on:click="toggleRecord(sect.id, item,record, 'isDeleted')")
                                                 iconify-icon.red(icon="bi:trash")
-
+                div(v-if="section==4")
+                    h4 Логотипы клиентов
+                    .input-group.mb-3
+                        span.Allparams.input-group-text Организованно мероприятий
+                        input( type="text" class="form-control"  placeholder="Введите число" v-model="general.projectCount" v-on:change="saveGeneral()" )
 
 
 block footer
