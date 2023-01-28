@@ -19,3 +19,12 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '.splide' );
     splide.mount();
 } );
+
+document.querySelectorAll(".menu a.menu-item").forEach(el=>{
+    el.onclick=(e)=>{
+        d.stopPropagation();
+        e.preventDefault();
+        console.log(e)
+        return false;
+    }
+})
