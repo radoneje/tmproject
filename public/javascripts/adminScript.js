@@ -97,7 +97,7 @@ let app = new Vue({
         },
         mainImageAdd: async function () {
             let r = await axios.post("/admin/mainImageAdd")
-            this.videos.unshift(r.data)
+            this.mainImages.unshift(r.data)
         },
         saveGeneral: async function () {
             await axios.post("/admin/general", this.general)
