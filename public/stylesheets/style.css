@@ -529,4 +529,7 @@ h4 {
 .rel{
    position: relative;
 }
+.mainContactsBlock{
+    position: absolute;
+}
 
