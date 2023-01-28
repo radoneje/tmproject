@@ -24,7 +24,10 @@ document.querySelectorAll(".menu a.menu-item").forEach(el=>{
     el.onclick=(e)=>{
         e.stopPropagation();
         e.preventDefault();
-        console.log(e)
+        el.scrollIntoView({
+            behavior: 'smooth'
+        });
+        //console.log(e)
         return false;
     }
 })
