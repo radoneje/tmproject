@@ -545,6 +545,7 @@ h4 {
     line-height: 27px;
     color: #586368;
     cursor: pointer;
+    z-index: 1000;
 }
 .mainContactsItem:hover{
     font-weight: 600;
