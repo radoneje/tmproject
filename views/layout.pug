@@ -36,6 +36,14 @@ html(lang="ru")
                         </defs>
                         </svg>
                     a.mainSubMenuItem.flex.center(href="#") Контакты
+                        .mainContactsBlock
+                            .mainContactsItem
+                                if facts
+                                    a(href="tel:" + facts.phone) #{facts.phone}
+                            .mainContactsItem
+                                if facts
+                                    a(href="mailto:" + facts.email) #{facts.email}
+
         .mainMenuDivaider
         block content
         .footer
