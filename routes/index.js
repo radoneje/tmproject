@@ -38,8 +38,10 @@ router.get('/commands', async function(req, res, next) {
   res.json(commands)
 })
 router.get('/projects', async function(req, res, next) {
+  let ret =  await req.db.collection('general').findOne({id:"facts"})
+
   let projects=await req.db.collection("projects").find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
-  res.render("projects",{projects})
+  res.render("projects",{projects, facts:ret.value})
 })
 
 
