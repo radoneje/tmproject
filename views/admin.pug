@@ -122,7 +122,7 @@ block content
                                     iconify-icon.green(icon="bi:lightbulb")
                                 span.input-group-text.pointer(v-else v-on:click="toggleProjectImage( item,'isActive')")
                                     iconify-icon.red(icon="bi:lightbulb-off")
-                                input( type="text" class="form-control"  placeholder="Введите название проекта" v-model="item.title" v-on:change="saveProject(item)" style="font-weigth:bold")
+                                input( type="text" class="form-control"  placeholder="Введите название проекта" v-model="item.title" v-on:change="saveProject(item)" style="font-weight: bold;")
                                 span.input-group-text.pointer(v-on:click="toggleProjectImage( item,'isDeleted')")
                                     iconify-icon.red(icon="bi:trash")
                             .input-group.mb-3
