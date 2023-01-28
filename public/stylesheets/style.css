@@ -593,4 +593,13 @@ h4 {
 #first{
     margin-top:140px;
 }
+.downloadPres2{
+    cursor: pointer;
+    background: #F8F6FE;
+    border: 2px solid #6944F0;
+    border-radius: 33px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #6944F0;
+}
 
