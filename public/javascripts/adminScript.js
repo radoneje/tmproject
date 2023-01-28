@@ -13,7 +13,7 @@ let app = new Vue({
     methods: {
         toggleMainImage:async function(item,sect){
             console.log(item)
-            item[sect]!=item[sect];
+            item[sect]=item[sect]?false:true;
             console.log(item)
             await axios.post("/admin/mainImage", item)
         },
