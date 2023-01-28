@@ -540,6 +540,7 @@ h4 {
     z-index: 1000;
     width: max-content;
     display: none;
+    left: -48px;
 }
 .mainContactsBlock.active{
     display: block;
