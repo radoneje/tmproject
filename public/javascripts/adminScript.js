@@ -122,7 +122,7 @@ let app = new Vue({
 
             await this.uploadFile(async (r) => {
                 item.url = r;
-                await this.saveMainImage()
+                await this.saveMainImage(item)
                 this.$forceUpdate();
             }, "image/png, image/jpeg")
         },
