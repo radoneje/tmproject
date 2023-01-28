@@ -40,7 +40,7 @@ html(lang="ru")
                         .mainContactsBlock
                             .mainContactsItem
                                 if facts
-                                    a(href="tel:" + facts.phone onclick="navigator.cliboard.write('"+facts.phone+"')")
+                                    a(href="tel:" + facts.phone onclick="navigator.cliboard.write('!{facts.phone}')")
                                     span #{facts.phone}&nbsp;
                                     span
                                         include svg/copy.svg
