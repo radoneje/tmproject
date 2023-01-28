@@ -40,7 +40,10 @@ html(lang="ru")
                         .mainContactsBlock
                             .mainContactsItem
                                 if facts
-                                    a(href="tel:" + facts.phone) #{facts.phone}
+                                    a(href="tel:" + facts.phone)
+                                    span #{facts.phone}&npsb
+                                    span
+                                        include svg/copy.svg
                             .mainContactsItem
                                 if facts
                                     a(href="mailto:" + facts.email) #{facts.email}
