@@ -37,7 +37,7 @@ router.get('/sections', async function(req, res, next) {
 router.get('/commands', async function(req, res, next) {
   res.json(commands)
 })
-router.get('/commands', async function(req, res, next) {
+router.get('/projects', async function(req, res, next) {
   let projects=await req.db.collection("projects").find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
   res.render("projects",{projects})
 })
