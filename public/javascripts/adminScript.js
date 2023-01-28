@@ -8,7 +8,8 @@ let app = new Vue({
         services: {},
         commands: [],
         geografy: {},
-        mainImages:[]
+        mainImages:[],
+        projects:[]
     },
     methods: {
         toggleMainImage:async function(item,sect){
@@ -77,6 +78,7 @@ let app = new Vue({
                 await this.saveVideo(item);
             })
         },
+
         deleteVideo: async function (item) {
             if (!confirm("Вы уверены?"))
                 return
@@ -94,6 +96,10 @@ let app = new Vue({
         videoAdd: async function () {
             let r = await axios.post("/admin/videoAdd")
             this.videos.unshift(r.data)
+        },
+        projectAdd: async function (item) {
+            let r = await axios.post("/admin/projectsAdd")
+            this.projects.unshift(r.data)
         },
         mainImageAdd: async function () {
             let r = await axios.post("/admin/mainImageAdd")
@@ -180,6 +186,9 @@ let app = new Vue({
             }
             if (this.section == 4) {
                 this.general = (await axios.get("/admin/general")).data;
+            }
+            if (this.section == 4) {
+                this.projects = (await axios.get("/admin/projects")).data;
             }
             if (this.section == 6) {
                 this.mainImages = (await axios.get("/admin/mainImages")).data;

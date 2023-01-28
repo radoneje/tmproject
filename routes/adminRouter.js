@@ -61,8 +61,33 @@ router.post('/videoAdd',adminAuth, async (req, res, next)=> {
   await req.db.collection('videos').insertOne(item);
   res.json(item)
 });
+
+router.post('/projectsAdd',adminAuth, async (req, res, next)=> {
+
+  let item={
+    id:moment().unix(),
+    title:"",
+    description:"",
+    type:"",
+    place:"",
+    client:"",
+    images:[],
+    isActive:false,
+    isDeleted:false,
+
+  }
+  await req.db.collection('videos').insertOne(projects);
+  res.json(item)
+});
+
 router.get('/videos',adminAuth, async (req, res, next)=> {
   let r=await req.db.collection('videos').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  r=r.reverse()
+  res.json(r)
+});
+
+router.get('/projects',adminAuth, async (req, res, next)=> {
+  let r=await req.db.collection('projects').find({isDeleted:false},{sort: { id: 1 },}).toArray();
   r=r.reverse()
   res.json(r)
 });

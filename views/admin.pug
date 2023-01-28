@@ -110,6 +110,10 @@ block content
                         input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="general.clientsLogoUrl" v-on:change=" saveGeneral()" )
                         span.input-group-text.pointer(v-on:click="uploadClientsLogo()") <iconify-icon icon="bi:upload"></iconify-icon>
                     img.img-thumbnail(:src="general.clientsLogoUrl")
+                div(v-if="section==5")
+                    h4 Все проекты
+                    .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectsAdd()") Добавить проект
+
                 div(v-if="section==6")
                     h4.mb-3 Главная картинка
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="mainImageAdd()") Добавить главную картинку
