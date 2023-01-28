@@ -569,4 +569,9 @@ h4 {
     padding: 24px 12px;
     margin-bottom: 12px;
 }
+.mainBlockRWr .splide__slide{
+    width: 660px;
+    height: 502px;
+    position: relative;
+}
 
