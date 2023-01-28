@@ -114,7 +114,7 @@ block content
                     h4 Все проекты
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAdd()") Добавить проект
                     .aMainImageWr
-                        .alert.alert-danger(v-if="mainImages.filter(i=>i.isActive).length<1") Нет ни одной активной картинки!
+                        .alert.alert-danger(v-if="mainImages.filter(i=>i.isActive).length<1") Нет ни одной активной записи!
                         .aMainImageItem(v-for="item in projects")
                             .input-group.mb-3
                                 span.Allparams.input-group-text Название проекта

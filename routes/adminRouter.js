@@ -103,6 +103,19 @@ router.post('/video',adminAuth, async (req, res, next)=> {
 
   res.json(r)
 });
+
+router.post('/project',adminAuth, async (req, res, next)=> {
+
+  let find={id:req.body.id}
+  if(req.body._id)
+    find={_id:ObjectId(req.body._id)}
+
+  delete req.body._id;
+
+  let r=await req.db.collection('projects').updateOne(find,{$set: req.body});
+
+  res.json(r)
+});
 router.post('/mainImage',adminAuth, async (req, res, next)=> {
 
   let find={id:req.body.id}

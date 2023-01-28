@@ -18,6 +18,12 @@ let app = new Vue({
             if(sect=="isDeleted")
                 this.mainImages=this.mainImages.filter(i=>i.id!=item.id)
         },
+        toggleProjectImage:async function(item,sect){
+            item[sect]=item[sect]?false:true;
+            await this.saveProject(item)
+            if(sect=="isDeleted")
+                this.projects=this.projects.filter(i=>i.id!=item.id)
+        },
         saveMainImage:async function(item){
             await axios.post("/admin/mainImage", item)
         },
@@ -92,6 +98,9 @@ let app = new Vue({
         },
         saveVideo: async function (item) {
             await axios.post("/admin/video", item)
+        },
+        saveProject: async function (item) {
+            await axios.post("/admin/project", item)
         },
         videoAdd: async function () {
             let r = await axios.post("/admin/videoAdd")
