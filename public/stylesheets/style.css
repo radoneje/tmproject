@@ -536,11 +536,11 @@ h4 {
 
     box-shadow: 0px 4px 16px rgba(156, 172, 196, 0.24);
     border-radius: 12px;
-    padding: 8px 24px;
+    padding: 8px 0;
     z-index: 1000;
 }
 .mainContactsItem{
-    padding: 8px 0;
+    padding: 8px 24px;
     font-weight: 400;
     font-size: 18px;
     line-height: 27px;
