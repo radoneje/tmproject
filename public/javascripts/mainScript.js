@@ -15,3 +15,7 @@ const showVideo=async(_id)=>{
         })
     }
 }
+document.addEventListener( 'DOMContentLoaded', function() {
+    var splide = new Splide( '.splide' );
+    splide.mount();
+} );
