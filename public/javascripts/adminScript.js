@@ -124,12 +124,14 @@ let app = new Vue({
                 item.url = r;
                 await this.saveMainImage()
                 this.$forceUpdate();
-            })
+            }, "image/png, image/jpeg")
         },
-        uploadFile: async function (callBack) {
+        uploadFile: async function (callBack, accept) {
             let input = document.createElement("input")
 
             input.type = "file";
+            if(accept)
+                input.accept=accept
             input.onchange = async (e) => {
                 let fd = new FormData();
                 console.log("card", input.files[0]);
