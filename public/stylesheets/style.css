@@ -608,4 +608,11 @@ h4 {
     padding: 8px 24px;
     margin-bottom: 24px;
 }
+.aProjectDescr{
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 8px;
+    height: 6em;
+
+}
 
