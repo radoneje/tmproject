@@ -562,4 +562,11 @@ h4 {
     color:#FFFFFF;
     background: #6944F0;
 }
+.aMainImageItem{
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid gray;
+    padding: 24px 12px;
+    margin-bottom: 12px;
+}
 
