@@ -134,6 +134,11 @@ block content
                             .input-group.mb-3
                                 span.Allparams.input-group-text Место проведения
                                 input( type="text" class="form-control"  placeholder="Место проведения и год: Москва, 2020 – 2021 " v-model="item.place" v-on:change="saveProject(item)" )
+                            .mt-2
+                                    div
+                                        label Описание
+                                    textarea
+
                 div(v-if="section==6")
                     h4.mb-3 Главная картинка
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="mainImageAdd()") Добавить главную картинку
