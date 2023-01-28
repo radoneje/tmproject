@@ -537,6 +537,7 @@ h4 {
     box-shadow: 0px 4px 16px rgba(156, 172, 196, 0.24);
     border-radius: 12px;
     padding: 8px 24px;
+    z-index: 1000;
 }
 .mainContactsItem{
     padding: 8px 0;
@@ -545,7 +546,7 @@ h4 {
     line-height: 27px;
     color: #586368;
     cursor: pointer;
-    z-index: 1000;
+
 }
 .mainContactsItem:hover{
     font-weight: 600;
