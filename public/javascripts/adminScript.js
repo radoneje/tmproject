@@ -187,7 +187,7 @@ let app = new Vue({
             if (this.section == 4) {
                 this.general = (await axios.get("/admin/general")).data;
             }
-            if (this.section == 4) {
+            if (this.section == 5) {
                 this.projects = (await axios.get("/admin/projects")).data;
             }
             if (this.section == 6) {
