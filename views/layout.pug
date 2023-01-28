@@ -41,15 +41,12 @@ html(lang="ru")
                             .mainContactsItem(onclick="navigator.clipboard.writeText('"+facts.phone+"');this.classList.add('active'); setTimeout(()=>{this.classList.remove('active');},1000)" )
                                 if facts
                                     a(href="tel:" + facts.phone )
-                                    span #{facts.phone}&nbsp;
-                                    span
-                                        include svg/copy.svg
+                                    span #{facts.phone}
+
                             .mainContactsItem(onclick="navigator.clipboard.writeText('"+facts.email+"');this.classList.add('active');setTimeout(()=>{this.classList.remove('active');},1000)")
                                 if facts
                                     a(href="mailto:" + facts.email )
-                                    span #{facts.email}&nbsp;
-                                    span
-                                        include svg/copy.svg
+                                    span #{facts.email}
 
         .mainMenuDivaider
         block content
