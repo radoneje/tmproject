@@ -22,7 +22,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 document.querySelectorAll(".menu a.menu-item").forEach(el=>{
     el.onclick=(e)=>{
-        d.stopPropagation();
+        e.stopPropagation();
         e.preventDefault();
         console.log(e)
         return false;
