@@ -570,8 +570,8 @@ h4 {
     margin-bottom: 12px;
 }
 .mainBlockRWr .splide__slide{
-    width: 660px;
-    height: 502px;
+
     position: relative;
+    background-size: cover;
 }
 
