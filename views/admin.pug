@@ -8,6 +8,7 @@ block content
             .col-2
                 .d-grid.gap-2
                     .btn.mb-3(v-bind:class='{"btn-primary":section==0, "btn-outline-secondary":section!=0}' v-on:click="section=0" style="text-align: left;") Общая информация
+                    .btn.mb-3(v-bind:class='{"btn-primary":section==6, "btn-outline-secondary":section!=6}' v-on:click="section=5" style="text-align: left;") Глявная картинка
                     .btn.mb-3(v-bind:class='{"btn-primary":section==1, "btn-outline-secondary":section!=1}' v-on:click="section=1" style="text-align: left;") Видео
                     .btn.mb-3(v-bind:class='{"btn-primary":section==2, "btn-outline-secondary":section!=2}' v-on:click="section=2" style="text-align: left;") Услуги
                     .btn.mb-3(v-bind:class='{"btn-primary":section==3, "btn-outline-secondary":section!=3}' v-on:click="section=3" style="text-align: left;") Команда и география
@@ -43,6 +44,7 @@ block content
                         span.Allparams.input-group-text URL презентации (pdf)
                         input( type="text" class="form-control"  placeholder="Введите URL URL презентации" v-model="general.preza" v-on:change=" saveGeneral()" )
                         span.input-group-text.pointer(v-on:click="uploadPreza()") <iconify-icon icon="bi:upload"></iconify-icon>
+
                 div(v-if="section==1")
                     h4.mb-3 Рзадел видео
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить видео
@@ -108,6 +110,10 @@ block content
                         input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="general.clientsLogoUrl" v-on:change=" saveGeneral()" )
                         span.input-group-text.pointer(v-on:click="uploadClientsLogo()") <iconify-icon icon="bi:upload"></iconify-icon>
                     img.img-thumbnail(:src="general.clientsLogoUrl")
+                div(v-if="section==6")
+                    h4.mb-3 Главная картинке
+                        .btn.btn-secondary.btn-sm.mb-3(v-on:click="mainImageAdd()") Добавить главную картинку
+                        .aVideoBox
 
 block footer
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

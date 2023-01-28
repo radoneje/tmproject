@@ -80,6 +80,14 @@ router.post('/video',adminAuth, async (req, res, next)=> {
 });
 
 
+router.get('/mainImages',adminAuth, async (req, res, next)=> {
+  let r=await req.db.collection('mainImages').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  r=r.reverse()
+  res.json(r)
+});
+
+
+
 
 router.post('/addService',adminAuth, async (req, res, next)=> {
   let item={

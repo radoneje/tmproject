@@ -7,7 +7,8 @@ let app = new Vue({
         sections: [],
         services: {},
         commands: [],
-        geografy: {}
+        geografy: {},
+        mainImages:[]
     },
     methods: {
         toggleRecord:async function (section, item, record, prm) {
@@ -164,6 +165,9 @@ let app = new Vue({
             }
             if (this.section == 4) {
                 this.general = (await axios.get("/admin/general")).data;
+            }
+            if (this.section == 6) {
+                this.mainImages = (await axios.get("/admin/mainImages")).data;
             }
         }
     },
