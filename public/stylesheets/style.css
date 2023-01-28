@@ -531,5 +531,11 @@ h4 {
 }
 .mainContactsBlock{
     position: absolute;
+    background: #FFFFFF;
+    /* Shadow (B 16; O 24%;) */
+
+    box-shadow: 0px 4px 16px rgba(156, 172, 196, 0.24);
+    border-radius: 12px;
+    padding: 16px 24px;
 }
 
