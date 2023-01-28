@@ -38,15 +38,15 @@ html(lang="ru")
                     .rel()
                         .mainSubMenuItem.flex.center(href="#" onclick="let elem=this.parentNode.querySelector('.mainContactsBlock');elem.classList.add('active'); setTimeout(()=>{elem.classList.remove('active')},10000)") Контакты
                         .mainContactsBlock
-                            .mainContactsItem
+                            .mainContactsItem(onclick="navigator.cliboard.write('"+facts.phone+"');this.classList.add('active')" )
                                 if facts
-                                    a(href="tel:" + facts.phone onclick="navigator.cliboard.write('"+facts.phone+"')")
+                                    a(href="tel:" + facts.phone )
                                     span #{facts.phone}&nbsp;
                                     span
                                         include svg/copy.svg
-                            .mainContactsItem
+                            .mainContactsItem(onclick="navigator.cliboard.write('"+facts.email+"');this.classList.add('active')")
                                 if facts
-                                    a(href="mailto:" + facts.email onclick="navigator.cliboard.write('"+facts.email+"')")
+                                    a(href="mailto:" + facts.email )
                                     span #{facts.email}&nbsp;
                                     span
                                         include svg/copy.svg
