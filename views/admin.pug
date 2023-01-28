@@ -136,8 +136,23 @@ block content
                                 input( type="text" class="form-control"  placeholder="Место проведения и год: Москва, 2020 – 2021 " v-model="item.place" v-on:change="saveProject(item)" )
                             .mt-2
                                     div
-                                        label Описание
+                                        label Описание:
                                     textarea.form-control.aProjectDescr(placeholder="Введите описание" v-model="item.description" v-on:change="saveProject(item)")
+                            .flex.between.mb-3(v-for="image in item.images")
+                                div(style="width:100px")
+                                    .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAdd()") Добавить картинку
+                                div(style="width:calc(100% - 100px)")
+                                    div
+                                        .input-group.mb-3
+                                            .input-group.mb-3
+                                                span.Allparams.input-group-text URL картинки (16/9)
+                                                span.input-group-text.pointer(v-on:click="uploadProjectImage(item)") <iconify-icon icon="bi:upload"></iconify-icon>
+                                                input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="item.url" v-on:change=" saveMainImage(item)" )
+
+                                                span.input-group-text.pointer(v-on:click="toggleMainImage( item,'isDeleted')")
+                                                    iconify-icon.red(icon="bi:trash")
+                                        img.img-thumbnail(:src="item.url")
+
 
                 div(v-if="section==6")
                     h4.mb-3 Главная картинка
