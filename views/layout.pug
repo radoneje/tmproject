@@ -36,7 +36,7 @@ html(lang="ru")
                         </defs>
                         </svg>
                     .rel()
-                        a.mainSubMenuItem.flex.center(href="#") Контакты
+                        a.mainSubMenuItem.flex.center(href="#" onclick="this.parentNode.querySelector('.mainContactsBlock').classList.toggle('active')") Контакты
                         .mainContactsBlock
                             .mainContactsItem
                                 if facts

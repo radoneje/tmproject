@@ -538,6 +538,11 @@ h4 {
     border-radius: 12px;
     padding: 8px 0;
     z-index: 1000;
+    width: max-content;
+    display: none;
+}
+.mainContactsBlock.active{
+    display: block;
 }
 .mainContactsItem{
     padding: 8px 24px;
