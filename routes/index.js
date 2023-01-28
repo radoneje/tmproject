@@ -26,8 +26,10 @@ router.get('/', async function(req, res, next) {
     let r=await req.db.collection(sect.id).find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
     geografy[sect.id]= r.reverse()
   }
+  let mainImages=await req.db.collection("mainImages").find({isDeleted:false, isActive:true},{sort: { id: 1 },}).toArray();
 
-  res.render('index', { videos, facts ,sections,services,commands,geografy, year:moment().format("YYYY")});
+
+  res.render('index', { videos, facts ,sections,services,commands,geografy,mainImages, year:moment().format("YYYY")});
 });
 router.get('/sections', async function(req, res, next) {
   res.json(sections)
