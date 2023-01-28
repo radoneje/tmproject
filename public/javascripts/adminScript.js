@@ -11,6 +11,10 @@ let app = new Vue({
         mainImages:[]
     },
     methods: {
+        toggleMainImage:async function(sect, item){
+            item[sect]!=item[sect];
+            await axios.post("/admin/mainImage", item)
+        },
         toggleRecord:async function (section, item, record, prm) {
             record[prm] = !record[prm];
 

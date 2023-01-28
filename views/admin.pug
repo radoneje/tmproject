@@ -117,13 +117,17 @@ block content
                         .aMainImageItem(v-for="item in mainImages")
                             .input-group.mb-3
                                 span.Allparams.input-group-text Подпись гл. картинки
+                                span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleMainImage( item,'isActive')")
+                                    iconify-icon.green(icon="bi:lightbulb")
+                                span.input-group-text.pointer(v-else v-on:click="toggleMainImage( item,'isActive')")
+                                    iconify-icon.red(icon="bi:lightbulb-off")
                                 input( type="text" class="form-control"  placeholder="Введите подпись гл. картинки" v-model="item.title" v-on:change="saveMainImage(item)" )
                             .input-group.mb-3
                                 span.Allparams.input-group-text URL гл. картинки (616x489)
                                 span.input-group-text.pointer(v-on:click="uploadMainImage(item)") <iconify-icon icon="bi:upload"></iconify-icon>
                                 input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="item.url" v-on:change=" saveMainImage(item)" )
 
-                                span.input-group-text.pointer(v-on:click="deleteMainImage(item)")
+                                span.input-group-text.pointer(v-on:click="toggleMainImage( item,'isDeleted')")
                                     iconify-icon.red(icon="bi:trash")
 
 block footer
