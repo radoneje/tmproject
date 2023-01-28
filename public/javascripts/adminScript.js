@@ -12,9 +12,12 @@ let app = new Vue({
     },
     methods: {
         toggleMainImage:async function(item,sect){
-            console.log(item)
             item[sect]=item[sect]?false:true;
-            console.log(item)
+            await this.saveMainImage(item)
+            if(sect=="isDeleted")
+                this.mainImages=this.mainImages.filter(i=>i.id!=item.id)
+        },
+        saveMainImage:async function(item){
             await axios.post("/admin/mainImage", item)
         },
         toggleRecord:async function (section, item, record, prm) {
