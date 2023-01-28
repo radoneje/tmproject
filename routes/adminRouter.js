@@ -76,7 +76,7 @@ router.post('/projectsAdd',adminAuth, async (req, res, next)=> {
     isDeleted:false,
 
   }
-  await req.db.collection('videos').insertOne(projects);
+  await req.db.collection('projects').insertOne(item);
   res.json(item)
 });
 
