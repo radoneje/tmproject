@@ -88,6 +88,19 @@ router.get('/mainImages',adminAuth, async (req, res, next)=> {
 
 
 
+router.post('/mainImageAdd',adminAuth, async (req, res, next)=> {
+
+  let item={
+    id:moment().unix(),
+    imageUrl:"",
+    imageTitle:"",
+    isActive:false,
+    isDeleted:false,
+  }
+  await req.db.collection('mainImages').insertOne(item);
+  res.json(item)
+});
+
 
 router.post('/addService',adminAuth, async (req, res, next)=> {
   let item={
