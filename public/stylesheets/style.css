@@ -593,6 +593,9 @@ h4 {
 #first, #projects, .container.admin{
     margin-top:140px;
 }
+.container.admin{
+    margin-bottom:64px;
+}
 
 .downloadPres2{
     cursor: pointer;
