@@ -140,6 +140,7 @@ body{
 
 section {
     margin-bottom: 64px;
+    scroll-margin-top: 140px;
 }
 
 .mainBlockR {
