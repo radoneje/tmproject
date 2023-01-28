@@ -20,7 +20,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
     splide.mount();
 } );
 
-document.querySelectorAll(".menu a.menu-item").forEach(el=>{
+/*document.querySelectorAll(".menu a.menu-item").forEach(el=>{
     el.onclick=(e)=>{
         e.stopPropagation();
         e.preventDefault();
@@ -30,4 +30,4 @@ document.querySelectorAll(".menu a.menu-item").forEach(el=>{
         //console.log(e)
         return false;
     }
-})
+})*/
