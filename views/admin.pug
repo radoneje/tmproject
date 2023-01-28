@@ -125,6 +125,12 @@ block content
                                 input( type="text" class="form-control"  placeholder="Введите название проекта" v-model="item.title" v-on:change="saveProject(item)" )
                                 span.input-group-text.pointer(v-on:click="toggleProjectImage( item,'isDeleted')")
                                     iconify-icon.red(icon="bi:trash")
+                            .input-group.mb-3
+                                span.Allparams.input-group-text Заказчик
+                                input( type="text" class="form-control"  placeholder="Введите Заказчика" v-model="item.client" v-on:change="saveProject(item)" )
+                            .input-group.mb-3
+                                span.Allparams.input-group-text Тип проекта
+                                input( type="text" class="form-control"  placeholder="Введите тип проекта (заседание, круглый стол и тп)" v-model="item.type" v-on:change="saveProject(item)" )
                 div(v-if="section==6")
                     h4.mb-3 Главная картинка
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="mainImageAdd()") Добавить главную картинку
