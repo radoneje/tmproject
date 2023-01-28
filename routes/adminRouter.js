@@ -92,8 +92,8 @@ router.post('/mainImageAdd',adminAuth, async (req, res, next)=> {
 
   let item={
     id:moment().unix(),
-    imageUrl:"",
-    imageTitle:"",
+    url:"",
+    title:"",
     isActive:false,
     isDeleted:false,
   }
