@@ -99,6 +99,11 @@ let app = new Vue({
             },"image/png, image/jpeg")
 
         },
+        deleteProjectImage:async function (image, item) {
+            image.isDeleted=true;
+            await this.saveProject(item)
+
+        },
 
 
         deleteVideo: async function (item) {

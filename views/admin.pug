@@ -139,7 +139,7 @@ block content
                                         label Описание:
                                     textarea.form-control.aProjectDescr(placeholder="Введите описание" v-model="item.description" v-on:change="saveProject(item)")
                             .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAddImage(item)") Добавить картинку
-                            .flex.between.mb-3(v-for="image in item.images")
+                            .flex.between.mb-3(v-for="image in item.images" v-if="!image.isDeleted")
                                 div(style="width:calc(100% - 100px)")
                                     div
                                         .input-group.mb-3
@@ -149,7 +149,7 @@ block content
 
                                                 input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="image.url" v-on:change=" saveMainImage(item)" )
 
-                                                span.input-group-text.pointer(v-on:click="toggleMainImage( item,'isDeleted')")
+                                                span.input-group-text.pointer(v-on:click="deleteProjectImage( image, item)")
                                                     iconify-icon.red(icon="bi:trash")
                                         img.img-thumbnail(:src="item.url")
 
