@@ -43,11 +43,12 @@ block content
                 .projectClientText !{item.client}
               .projectSection
                 .projectTitle !{item.title}
-              .projectSection
-                if item.type.length>0
-                  .projectType !{item.type},
-                if item.description.length > 0
-                  .projectDescription !{item.description}
+              if   item.type.length>0 ||   item.description.length > 0
+                .projectSection
+                  if item.type.length>0
+                    .projectType !{item.type},
+                  if item.description.length > 0
+                    .projectDescription !{item.description}
 
 
 
