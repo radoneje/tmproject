@@ -100,7 +100,8 @@ let app = new Vue({
 
         },
         deleteProjectImage:async function (image, item) {
-            image.isDeleted=true;
+            if(!confirm("Вы уверены?"))
+                return;
             item.images.forEach(i=>{
                 if(i.id==image.id)
                     i.isDeleted=true;
