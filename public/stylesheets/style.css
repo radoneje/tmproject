@@ -608,6 +608,15 @@ h4 {
     padding: 8px 24px;
     margin-bottom: 24px;
 }
+.aAdminMenu{
+    position: fixed;
+    background: yellow;
+    padding: 24px;
+    top: 93px;
+    left: 0;
+    z-index: -1;
+}
+.aAdminMain{}
 .aProjectDescr{
     box-sizing: border-box;
     border: 1px solid black;
