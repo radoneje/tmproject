@@ -44,8 +44,10 @@ block content
               .projectSection
                 .projectTitle !{item.title}
               .projectSection
-                .projectType !{item.type},
-                .projectDescription !{item.description},
+                if item.type.length>0
+                  .projectType !{item.type},
+                if item.description.length > 0
+                  .projectDescription !{item.description},
 
 
 
