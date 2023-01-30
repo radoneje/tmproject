@@ -138,7 +138,7 @@ block content
                                     div
                                         label Описание:
                                     textarea.form-control.aProjectDescr(placeholder="Введите описание" v-model="item.description" v-on:change="saveProject(item)")
-                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAddImage()") Добавить картинку
+                            .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAddImage(item)") Добавить картинку
                             .flex.between.mb-3(v-for="image in item.images")
                                 div(style="width:calc(100% - 100px)")
                                     div
