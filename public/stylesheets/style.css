@@ -702,4 +702,5 @@ h4 {
     font-size: 16px;
     line-height: 24px;
     color: #404A51;
+    white-space: pre;
 }
