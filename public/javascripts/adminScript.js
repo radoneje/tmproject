@@ -101,6 +101,10 @@ let app = new Vue({
         },
         deleteProjectImage:async function (image, item) {
             image.isDeleted=true;
+            item.images.forEach(i=>{
+                if(i.id==image.id)
+                    i.isDeleted=true;
+            })
             await this.saveProject(item)
 
         },
