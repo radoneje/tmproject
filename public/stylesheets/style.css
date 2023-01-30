@@ -645,7 +645,7 @@ h4 {
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
-.videoWrapper .image {
+.projectItemImageWr .image {
     position: absolute;
     top: 0;
     left: 0;
