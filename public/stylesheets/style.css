@@ -666,3 +666,24 @@ h4 {
     width: 100%;
     text-align: center;
 }
+.projectTower{
+    padding: 32px 24px;
+}
+.prodjectClient{
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #D9DBDC;;
+}
+.projectClientTitle {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #8D9297;
+    margin-bottom: 4px;
+}
+.projectClientText {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #404A51;
+}
