@@ -656,5 +656,13 @@ h4 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor:pointer;
 
+}
+.imageSvg{
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }

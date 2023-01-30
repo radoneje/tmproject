@@ -24,7 +24,17 @@ block content
             .projectItemImageWr
               if item.images.length>0
                 .image(style="background-image: url("+item.images[0].url+");")
-              else
+              if item.images.length>1
+                .imageSvg
+                  <svg width="62" height="6" viewBox="0 0 62 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="3" cy="3" r="3" fill="white"/>
+                  <circle cx="17" cy="3" r="3" fill="white"/>
+                  <circle cx="31" cy="3" r="3" fill="white"/>
+                  <circle cx="45" cy="3" r="3" fill="white"/>
+                  <circle cx="59" cy="3" r="3" fill="white"/>
+                  </svg>
+
+              if  item.images.length==0
                 .flex.center
                   div Пока фотографий нет
             .projectTitle !{item.title}
