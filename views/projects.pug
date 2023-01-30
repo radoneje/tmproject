@@ -21,7 +21,7 @@ block content
       .projectsWr.flex
         each item in projects
           .projectItem
-            .projectItemImageWr
+            .projectItemImageWr(onclick="showImages('"+item._id+"')")
               if item.images.length>0
                 .image(style="background-image: url("+item.images[0].url+");")
               if item.images.length>1
