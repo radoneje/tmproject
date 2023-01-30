@@ -144,9 +144,10 @@ block content
                                     div
                                         .input-group.mb-3
                                             .input-group.mb-3
-                                                span.Allparams.input-group-text URL картинки (пропорции 16/9)
-                                                span.input-group-text.pointer(v-on:click="uploadProjectImage(item)") <iconify-icon icon="bi:upload"></iconify-icon>
-                                                input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="item.url" v-on:change=" saveMainImage(item)" )
+                                                span.input-group-text.pointer(v-on:click="uploadProjectImage(image, item)") <iconify-icon icon="bi:upload"></iconify-icon>
+                                                span.Allparams.input-group-text URL картинки (16/9)
+
+                                                input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="image.url" v-on:change=" saveMainImage(item)" )
 
                                                 span.input-group-text.pointer(v-on:click="toggleMainImage( item,'isDeleted')")
                                                     iconify-icon.red(icon="bi:trash")

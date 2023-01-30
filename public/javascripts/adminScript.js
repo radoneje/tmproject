@@ -85,13 +85,21 @@ let app = new Vue({
             })
         },
         projectAddImage:async function (item) {
-            item.images.push({ id:Math.floor((new Date()).getTime() / 1000)});
+            item.images.push({ id:Math.floor((new Date()).getTime() / 1000), isActive:false, isDeleted:false, url:null});
             await this.saveProject(item)
            /* await this.uploadFile(async (r) => {
                 item.images.push({imageLink : r, id:Math.floor((new Date()).getTime() / 1000)});
                 await this.saveProject(item)
             }, "image/png, image/jpeg")*/
         },
+        uploadProjectImage:async function (image, item) {
+            await this.uploadFile(async (r) => {
+                image.url=r;
+                await this.saveProject(item)
+            },"image/png, image/jpeg")
+
+        },
+
 
         deleteVideo: async function (item) {
             if (!confirm("Вы уверены?"))
