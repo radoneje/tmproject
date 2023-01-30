@@ -705,7 +705,8 @@ h4 {
     white-space: pre;
 }
 .projectPlaceTitle{
-
+    align-items: center;
+    justify-content: left;
 }
 .projectPlace{
     margin-left: 12px;
