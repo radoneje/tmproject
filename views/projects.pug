@@ -50,6 +50,20 @@ block content
                     .projectType !{item.type},
                   if item.description.length > 0
                     .projectDescription !{item.description}
+              if  item.place.length>0
+                .projectSection
+                  .projectPlaceTitle.flex
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_318_4151)">
+                    <path d="M9 18C9 18 15.75 11.6033 15.75 6.75C15.75 4.95979 15.0388 3.2429 13.773 1.97703C12.5071 0.711159 10.7902 0 9 0C7.20979 0 5.4929 0.711159 4.22703 1.97703C2.96116 3.2429 2.25 4.95979 2.25 6.75C2.25 11.6033 9 18 9 18ZM9 10.125C8.10489 10.125 7.24645 9.76942 6.61351 9.13649C5.98058 8.50355 5.625 7.64511 5.625 6.75C5.625 5.85489 5.98058 4.99645 6.61351 4.36351C7.24645 3.73058 8.10489 3.375 9 3.375C9.89511 3.375 10.7536 3.73058 11.3865 4.36351C12.0194 4.99645 12.375 5.85489 12.375 6.75C12.375 7.64511 12.0194 8.50355 11.3865 9.13649C10.7536 9.76942 9.89511 10.125 9 10.125Z" fill="#A58FF6"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_318_4151">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                    .projectPlace !{item.place},
 
 
 

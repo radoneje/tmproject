@@ -704,3 +704,13 @@ h4 {
     color: #404A51;
     white-space: pre;
 }
+.projectPlaceTitle{
+
+}
+.projectPlace{
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 8px;
+    line-height: 18px;
+    color: #B3B7B9;
+}
