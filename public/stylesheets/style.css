@@ -616,7 +616,9 @@ h4 {
     left: 0;
     z-index: -1;
 }
-.aAdminMain{}
+.aAdminMain{
+    margin-left: 185px;
+}
 .aProjectDescr{
     box-sizing: border-box;
     border: 1px solid black;
@@ -624,5 +626,8 @@ h4 {
     height: 6em;
     width: 100%;
 
+}
+.footer{
+    background-color: #FFFFFF;
 }
 
