@@ -85,8 +85,12 @@ let app = new Vue({
             })
         },
         projectAddImage:async function (item) {
-            item.images.push({ id:Math.floor((new Date()).getTime() / 1000), isActive:false, isDeleted:false, url:null});
-            await this.saveProject(item)
+            let image={ id:Math.floor((new Date()).getTime() / 1000), isActive:false, isDeleted:false, url:null}
+            item.images.push(image);
+            await this.saveProject(item);
+            setTimeout(()=>{
+                this.uploadProjectImage(image, item)
+            },0)
            /* await this.uploadFile(async (r) => {
                 item.images.push({imageLink : r, id:Math.floor((new Date()).getTime() / 1000)});
                 await this.saveProject(item)
