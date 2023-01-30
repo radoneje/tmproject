@@ -46,7 +46,7 @@ block content
                         span.input-group-text.pointer(v-on:click="uploadPreza()") <iconify-icon icon="bi:upload"></iconify-icon>
 
                 div(v-if="section==1")
-                    h4.mb-3 Рзадел видео
+                    h4.mb-3 Раздел видео
                     .btn.btn-secondary.btn-sm.mb-3(v-on:click="videoAdd()") Добавить видео
                     .aVideoBox
                         .aVideoItem(v-for="item in videos" v-bind:class="{active:item.isActive}")
@@ -140,7 +140,7 @@ block content
                                     textarea.form-control.aProjectDescr(placeholder="Введите описание" v-model="item.description" v-on:change="saveProject(item)")
                             .btn.btn-secondary.btn-sm.mb-3(v-on:click="projectAddImage(item)") Добавить картинку
                             .flex.between.mb-3(v-for="image in item.images" v-if="!image.isDeleted" style="width:calc(100% - 100px);display: flex;gap: 24px;")
-                                div
+                                div(style="width: calc(100% );")
                                     .input-group.mb-3
                                             .input-group.mb-3
                                                 span.input-group-text.pointer(v-on:click="uploadProjectImage(image, item)") <iconify-icon icon="bi:upload"></iconify-icon>
