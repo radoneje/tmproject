@@ -38,9 +38,10 @@ block content
                 .image.flex.center
                   div Пока фотографий нет
             .projectTower
-              .projectSection
-                .projectClientTitle Заказчик
-                .projectClientText !{item.client}
+              if item.client.length>0
+                .projectSection
+                  .projectClientTitle Заказчик
+                  .projectClientText !{item.client}
               .projectSection
                 .projectTitle !{item.title}
               if   item.type.length>0 ||   item.description.length > 0
