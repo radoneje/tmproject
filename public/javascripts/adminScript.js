@@ -86,8 +86,8 @@ let app = new Vue({
         },
         projectAddImage:async function (item) {
             await this.uploadFile(async (r) => {
-                item.push({imageLink : r, id:moment().unix()});
-                await this.saveProject()
+                item.images.push({imageLink : r, id:moment().unix()});
+                await this.saveProject(item)
             })
         },
 
