@@ -88,7 +88,7 @@ let app = new Vue({
             await this.uploadFile(async (r) => {
                 item.images.push({imageLink : r, id:moment().unix()});
                 await this.saveProject(item)
-            })
+            }, "image/png, image/jpeg")
         },
 
         deleteVideo: async function (item) {
