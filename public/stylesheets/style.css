@@ -669,7 +669,7 @@ h4 {
 .projectTower{
     padding: 32px 24px;
 }
-.prodjectClient{
+.projectSection{
     margin-bottom: 12px;
     padding-bottom: 12px;
     border-bottom: 1px solid #D9DBDC;;
@@ -679,11 +679,27 @@ h4 {
     font-size: 12px;
     line-height: 18px;
     color: #8D9297;
-    margin-bottom: 4px;
 }
 .projectClientText {
     font-weight: 400;
     font-size: 12px;
     line-height: 18px;
+    color: #404A51;
+}
+.projectTitle{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #404A51;
+}
+.projectType{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #404A51;
+}
+.projectDescription{
+    font-size: 16px;
+    line-height: 24px;
     color: #404A51;
 }
