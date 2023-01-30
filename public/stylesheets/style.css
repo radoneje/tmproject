@@ -613,7 +613,7 @@ h4 {
     padding: 24px;
     top: 93px;
     left: 0;
-    z-index: -1;
+    z-index: 0;
 }
 .aAdminMain{
     margin-left: 185px;
