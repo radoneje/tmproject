@@ -145,13 +145,11 @@ block content
                                         .input-group.mb-3
                                             .input-group.mb-3
                                                 span.input-group-text.pointer(v-on:click="uploadProjectImage(image, item)") <iconify-icon icon="bi:upload"></iconify-icon>
-                                                span.Allparams.input-group-text URL картинки (16/9)
-
+                                                span.input-group-text URL (16/9)
                                                 input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="image.url" v-on:change=" saveMainImage(item)" )
-
                                                 span.input-group-text.pointer(v-on:click="deleteProjectImage( image, item)")
                                                     iconify-icon.red(icon="bi:trash")
-                                        img.img-thumbnail(:src="item.url")
+                                    img.img-thumbnail(:src="image.url")
 
 
                 div(v-if="section==6")
