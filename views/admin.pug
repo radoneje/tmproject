@@ -134,7 +134,7 @@ block content
                             .input-group.mb-3
                                 span.Allparams.input-group-text Место проведения
                                 input( type="text" class="form-control"  placeholder="Место проведения и год: Москва, 2020 – 2021 " v-model="item.place" v-on:change="saveProject(item)" )
-                            .mt-2
+                            .mt-2.mb-3
                                     div
                                         label Описание:
                                     textarea.form-control.aProjectDescr(placeholder="Введите описание" v-model="item.description" v-on:change="saveProject(item)")
