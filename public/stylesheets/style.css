@@ -709,9 +709,9 @@ h4 {
     justify-content: left;
 }
 .projectPlace{
-    margin-left: 12px;
+    margin-left: 8px;
     font-weight: 600;
-    font-size: 8px;
+    font-size: 12px;
     line-height: 18px;
     color: #B3B7B9;
 }
