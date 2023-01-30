@@ -640,3 +640,21 @@ h4 {
     width: calc(33% - 24px);
     margin-bottom: 48px;
 }
+.projectItemImageWr{
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.videoWrapper .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+}

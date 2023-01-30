@@ -21,6 +21,12 @@ block content
       .projectsWr.flex
         each item in projects
           .projectItem
+            .projectItemImageWr
+              if item.images.length>0
+                .image(style="background-image: url("+item.images[0].url+");")
+              else
+                .flex.center
+                  div Пока фотографий нет
             .projectTitle !{item.title}
 
 
