@@ -936,6 +936,7 @@ h4 {
         line-height: 27px;
         color: #D2C7FB;
         margin-bottom: 24px;
+        box-sizing: border-box;
     }
     .downloadPrez{
         position: initial;
