@@ -1126,12 +1126,15 @@ h4 {
      }
     #projects .sectionHeader{
         padding: 0 12px;
+        align-items: flex-start;
+        padding-top: 24px;
     }
     .downloadPres2{
         color: white;
         background: #6944F0;
-        padding: 16px 14px;
+        padding: 4px 16px;
         border-radius: 30px;
+        margin-bottom: 0;
     }
     .downloadPres2 svg path{
         fill:#FFFFFF
