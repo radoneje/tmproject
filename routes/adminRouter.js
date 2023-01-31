@@ -53,6 +53,8 @@ router.post('/general', adminAuth, async (req, res, next)=> {
   res.json(ret)
 });
 router.post('/uploadFile',upload.single('card'), async (req, res, next)=> {
+  if(!req.session.admin)
+    return res.sendStatus(401)
   if (req.file) {
     req.file.originalname = Buffer.from(req.file.originalname, 'latin1').toString('utf8')
     req.file.date=new Date();
