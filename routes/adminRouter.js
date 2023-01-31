@@ -9,12 +9,15 @@ const fs=require("fs")
 
 const adminAuth=(req, res, next)=>{
   if(!req.session.admin)
-    return res.redirect("/admin/logn?redirect="+encodeURI(req.baseUrl))
+    return res.redirect("/admin/login?redirect="+encodeURI(req.baseUrl))
   next();
 }
 /* GET users listing. */
 router.get('/', adminAuth, function(req, res, next) {
   res.render("admin", {moment})
+});
+router.get('/login', adminAuth, function(req, res, next) {
+  res.render("login", )
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
   let ret =  await req.db.collection('general').findOne({id:"facts"})
