@@ -736,6 +736,12 @@ h4 {
 .splide__pagination__page.is-active:after{
     background: #6944F0;
 }
+.mobile{
+    visibility: hidden;
+}
+.descktop{
+    visibility: visible;
+}
 
 @media all and (max-width: 1248px){
     .mainTower{
@@ -756,6 +762,19 @@ h4 {
     }
     .foolerItem:first-child{
         width: 25%;
+    }
+}
+@media all and (max-width: 975px) {
+    .mobile{
+        visibility: visible;
+    }
+    .descktop{
+        visibility: hidden;
+    }
+    .mobileMenu{
+        background: #FFFFFF;
+        box-shadow: 0px 4px 24px rgba(152, 166, 175, 0.25);
+        height: 64px;
     }
 }
 
