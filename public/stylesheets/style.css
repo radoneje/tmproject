@@ -979,6 +979,11 @@ h4 {
         font-size: 20px;
         line-height: 30px;
     }
+    .video .sectionHeader{
+        box-sizing: border-box;
+        padding: 0 16px;
+        justify-content: space-between;
+    }
 }
 
 
