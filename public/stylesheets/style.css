@@ -1023,9 +1023,7 @@ h4 {
         width: 24px;
         height: 24px
     }
-    .footerText{
-        display: block;
-    }
+
     #services, #geo, #clients{
         padding: 0 16px;
         margin-top: 0;
