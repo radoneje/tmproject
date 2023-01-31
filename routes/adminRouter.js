@@ -9,7 +9,7 @@ const fs=require("fs")
 
 const adminAuth=(req, res, next)=>{
   if(!req.session.admin)
-    return res.redirect("/adminlogn?redirect="+encodeURI(req.req.baseUrl))
+    return res.redirect("/admin/logn?redirect="+encodeURI(req.baseUrl))
   next();
 }
 /* GET users listing. */
