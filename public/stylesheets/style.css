@@ -846,6 +846,8 @@ h4 {
     .mobileMenuBoxItems .menu
     {
         display: block;
+        margin-left: 0;
+        margin-right: 0;
     }
     .mobileMenuBoxItems .menu a{
         display: block;
@@ -861,6 +863,7 @@ h4 {
     }
     .mobile .mainSubMenuItem{
         margin-bottom: 24px;
+        margin-left: 0;
     }
 }
 
