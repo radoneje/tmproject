@@ -883,6 +883,9 @@ h4 {
     .mainBlockL, .mainBlockR{
         width: 100%;
     }
+    .mainBlockRWr .splide{
+        width: 100% !important;
+    }
 }
 
 
