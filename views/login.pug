@@ -13,15 +13,20 @@ block content
                     input#name.form-control(name='name' value=name )
                 .mb-3
                     label Пароль
-                    input.form-control(name='pass' type="password" )
+                    input#pass.form-control(name='pass' type="password" )
                 .mb-3
                     input.btn.btn-success(type="submit" value="Войти")
                 if msg
                     .mb-3
                         .alert.alert-warning
                             h6  !{msg}
-    script.
-        document.getElementById("name").focus()
+    if passFocus
+        script.
+            document.getElementById("pass").focus()
+    else
+        script.
+            document.getElementById("name").focus()
+
 
 
 
