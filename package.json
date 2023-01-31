@@ -10,6 +10,8 @@
     "debug": "~2.6.9",
     "easyimage": "^3.1.1",
     "express": "~4.16.1",
+    "express-mongodb-session": "^3.2.1",
+    "express-session": "^1.17.3",
     "http-errors": "~1.6.3",
     "moment": "^2.29.4",
     "mongodb": "^4.13.0",
