@@ -1,11 +1,11 @@
 .menu
     //a.menu-item(href="/#first") Главная
     a.menu-item(href="/#video" onclick="document.body.classList.remove('activeMobileMenu')") Проекты
-    a.menu-item(href="/#services") Услуги
-    a.menu-item(href="/#geo") О команде
-    a.menu-item(href="/#clients") Клиенты
+    a.menu-item(href="/#services" onclick="document.body.classList.remove('activeMobileMenu')") Услуги
+    a.menu-item(href="/#geo" onclick="document.body.classList.remove('activeMobileMenu')") О команде
+    a.menu-item(href="/#clients" onclick="document.body.classList.remove('activeMobileMenu')") Клиенты
 .mainSubMenu.flex.center
-    a.mainSubMenuItem.flex.center(href="/projects") Все проекты
+    a.mainSubMenuItem.flex.center(href="/projects" onclick="document.body.classList.remove('activeMobileMenu')") Все проекты
         <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_302_3223)">
         <path d="M20.7754 16.3C18.5663 16.3 16.7754 14.5091 16.7754 12.3C16.7754 10.0908 18.5663 8.29999 20.7754 8.29999C22.9845 8.29999 24.7754 10.0908 24.7754 12.3C24.7754 14.5091 22.9845 16.3 20.7754 16.3Z" fill="#E8E6EE" />
@@ -19,7 +19,7 @@
         </defs>
         </svg>
     .rel()
-        .mainSubMenuItem.flex.center(href="#" onclick="let elem=this.parentNode.querySelector('.mainContactsBlock');elem.classList.add('active'); setTimeout(()=>{elem.classList.remove('active')},10000)") Контакты
+        .mainSubMenuItem.flex.center(" onclick="let elem=this.parentNode.querySelector('.mainContactsBlock');elem.classList.add('active'); setTimeout(()=>{elem.classList.remove('active')},10000)") Контакты
         .mainContactsBlock
             if facts
                 .mainContactsItem(onclick="navigator.clipboard.writeText('"+facts.phone+"');this.classList.add('active'); setTimeout(()=>{this.classList.remove('active');},1000)" )
