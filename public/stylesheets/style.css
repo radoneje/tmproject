@@ -1084,6 +1084,9 @@ h4 {
     .foolerItem:first-child {
         width: 100%;
     }
+    .foolerItemContactWr{
+        width: 100%;
+    }
 }
 
 
