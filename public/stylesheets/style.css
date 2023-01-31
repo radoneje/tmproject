@@ -935,9 +935,19 @@ h4 {
         font-size: 18px;
         line-height: 27px;
         color: #D2C7FB;
+        margin-bottom: 24px;
     }
     .downloadPrez{
         position: inherit;
+    }
+    .downloadPrezDecor{
+        width: 84px;
+        height: 84px;
+    }
+    .downloadPrezText{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 27px;
     }
 }
 
