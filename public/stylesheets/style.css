@@ -1121,6 +1121,9 @@ h4 {
     #projects .sectionHeaderIcon{
         display:   none;
     }
+    .downloadPres2 div{
+    display: none;
+     }
 
 }
 
