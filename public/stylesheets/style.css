@@ -1063,6 +1063,12 @@ h4 {
     #clients{
         padding-top: 64px;
     }
+    #clients .videoWr{
+        box-sizing: border-box;
+        background: #ffffff;
+        padding: 16px;
+        border-radius: 12px;
+    }
 }
 
 
