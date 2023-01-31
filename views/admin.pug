@@ -181,7 +181,7 @@ block content
                                 span.input-group-text.pointer(v-on:click="toggleMainImage( item,'isDeleted')")
                                     iconify-icon.red(icon="bi:trash")
                             img.img-thumbnail(:src="item.url")
-                    div(v-if="section==7")
+                div(v-if="section==7")
                         h4.mb-3 Логины в админку
                         .btn.btn-secondary.btn-sm.mb-3(v-on:click="loginAdd()") Добавить пользователя
 
