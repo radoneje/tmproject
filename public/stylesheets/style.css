@@ -820,6 +820,16 @@ h4 {
     .mobileMenu.active .mobileMenuBox{
         visibility: visible;
     }
+    .mobileMenuBoxFooterWr{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: #FFFFFF;
+    }
+    .mobileMenuBoxFooter{
+        height: 140px;
+    }
 }
 
 
