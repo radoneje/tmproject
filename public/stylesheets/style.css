@@ -877,6 +877,9 @@ h4 {
     section{
         background: #f7f6fe;
     }
+    .mainBlock{
+        flex-wrap: wrap;
+    }
 }
 
 
