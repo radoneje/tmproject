@@ -797,6 +797,9 @@ h4 {
         box-sizing: border-box;
 
     }
+    .mobileMenuWr{
+        padding: 24px;
+    }
     .mobileMenuModal{
         width: 100%;
         height: 100%;
