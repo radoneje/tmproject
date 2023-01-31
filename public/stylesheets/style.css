@@ -846,6 +846,12 @@ h4 {
     }
     .mobileMenuBoxItems .menu a{
         display: block;
+        text-align: center;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #666E74;
+        margin-bottom: 24px;
     }
 }
 
