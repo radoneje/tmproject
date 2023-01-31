@@ -1060,6 +1060,9 @@ h4 {
     #geo .sectionHeaderIcon svg{
         width: 60px;
     }
+    #clients{
+        padding-top: 64px;
+    }
 }
 
 
