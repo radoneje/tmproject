@@ -1082,6 +1082,9 @@ h4 {
     .footerTitle .a{
         padding: 0 12px;
     }
+    .foolerItem:first-child {
+        width: 100%;
+    }
 }
 
 
