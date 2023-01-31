@@ -754,7 +754,8 @@ h4 {
         width: 70px;
         height: 70px;
     }
+    .foolerItem:first-child{
+        width: 25%;
+    }
 }
-.foolerContact:first-child{
-    margin-left: 0;
-}
+
