@@ -840,6 +840,13 @@ h4 {
         margin-bottom: 12px;
         margin-top: 12px;
     }
+    .mobileMenuBoxItems .menu
+    {
+        display: block;
+    }
+    .mobileMenuBoxItems .menu a{
+        display: block;
+    }
 }
 
 
