@@ -169,12 +169,18 @@ let app = new Vue({
                 await this.saveGeneral()
                 this.$forceUpdate();
             }, "image/png, image/jpeg")
+
+            await this.uploadFile(async (r) => {
+                item.url = r;
+                await this.saveMainImage(item)
+                this.$forceUpdate();
+            }, "image/png, image/jpeg")
         },
         uploadMainImage: async function (item) {
 
             await this.uploadFile(async (r) => {
-                this.general.mainImgUrl = r;
-                await this.saveGeneral()
+                item.url = r;
+                await this.saveMainImage(item)
                 this.$forceUpdate();
             }, "image/png, image/jpeg")
         },

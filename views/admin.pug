@@ -46,14 +46,7 @@ block content
                         input( type="text" class="form-control"  placeholder="Введите URL og_image" v-model="general.og_image" v-on:change=" saveGeneral()" )
                         span.input-group-text.pointer(v-on:click="uploadOg_image()") <iconify-icon icon="bi:upload"></iconify-icon>
 
-                    img.img-thumbnail(:src="general.mainImgUrl")
-                    .input-group.mb-3
-                        span.Allparams.input-group-text Подпись гл. картинки
-                        input( type="text" class="form-control"  placeholder="Введите подпись гл. картинки" v-model="general.mainImgDescr" v-on:change="saveGeneral()" )
-                    .input-group.mb-3
-                        span.Allparams.input-group-text URL гл. картинки (616x489)
-                        input( type="text" class="form-control"  placeholder="Введите URL главной картинки" v-model="general.mainImgUrl" v-on:change=" saveGeneral()" )
-                        span.input-group-text.pointer(v-on:click="uploadMainImage()") <iconify-icon icon="bi:upload"></iconify-icon>
+
                     .input-group.mb-3
                         span.Allparams.input-group-text URL презентации (pdf)
                         input( type="text" class="form-control"  placeholder="Введите URL  презентации" v-model="general.preza" v-on:change=" saveGeneral()" )
