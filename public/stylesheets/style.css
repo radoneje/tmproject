@@ -1043,11 +1043,11 @@ h4 {
         box-sizing: border-box;
 
     }
-    .sectionItemText{
+    .sectionItemText, .geografyItemText{
         font-size: 16px;
         line-height: 24px;
     }
-    .sectionItemDecor{
+    .sectionItemDecor, .geografyItemDecor{
         width: 8px;
         height: 8px;
         margin-right: 12px;
@@ -1095,6 +1095,7 @@ h4 {
         width: 100%;
         justify-content: left !important;
     }
+
 }
 
 
