@@ -719,3 +719,16 @@ h4 {
     line-height: 18px;
     color: #B3B7B9;
 }
+.splide__pagination__page.is-active{
+    position: relative;
+}
+.splide__pagination__page.is-active:after{
+    content: '';
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top:10%;
+    left: 10%;
+    border-radius: 50%;
+    background: #6944F0;
+}
