@@ -8,7 +8,26 @@ var indexRouter = require('./routes/index');
 var adminRouter = require('./routes/adminRouter');
 const {MongoClient} = require('mongodb');
 const mongo = new MongoClient("mongodb://localhost");
+const session = require('express-session');
+const MongoDBStore = require('express-mongodb-session')(session);
+
 var app = express();
+const store = new MongoDBStore({
+  existingConnection: mongo,
+  collection: 'mySessions'
+});
+app.use(require('express-session')({
+  secret: 'greg*nbmvvervreb',
+  cookie: {
+    maxAge: 1000 * 60 * 60 * 24 * 7*31 // 1 mounth
+  },
+  store: store,
+  // Boilerplate options, see:
+  // * https://www.npmjs.com/package/express-session#resave
+  // * https://www.npmjs.com/package/express-session#saveuninitialized
+  resave: true,
+  saveUninitialized: true
+}));
 app.mongo=mongo;
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
