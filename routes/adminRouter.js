@@ -16,8 +16,7 @@ const adminAuth=(req, res, next)=>{
 }
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  if(!req.session.admin)
-    return res.redirect("/admin/login?redirect="+encodeURI(req.baseUrl))
+
   res.render("admin", {moment})
 });
 router.get('/login', function(req, res, next) {
