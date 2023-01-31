@@ -1093,7 +1093,7 @@ h4 {
     }
     .foolerContact{
         width: 100%;
-        justify-content: left;
+        justify-content: left !important;
     }
 }
 
