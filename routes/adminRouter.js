@@ -9,8 +9,8 @@ const fs=require("fs")
 
 
 const adminAuth=(req, res, next)=>{
-  if(!req.session.admin)
-    return res.sendStatus(401)
+ // if(!req.session.admin)
+  //  return res.sendStatus(401)
 
   next();
 }
