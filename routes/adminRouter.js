@@ -8,7 +8,9 @@ const path=require("path")
 const fs=require("fs")
 
 const adminAuth=(req, res, next)=>{
-  next()
+  if(!req.sessions.admin)
+    return res.redirect("/adminlogn?redirect="+encodeURI(req.req.baseUrl))
+  next();
 }
 /* GET users listing. */
 router.get('/', adminAuth, function(req, res, next) {
