@@ -588,7 +588,7 @@ h4 {
     background-repeat: no-repeat;
 }
 .splide__pagination{
-    bottom: -0.5em;
+    bottom: 0.1em;
 }
 .splideWr{
     width: 100%;
@@ -1114,6 +1114,9 @@ h4 {
     .foolerContact{
         width: 100%;
         justify-content: left !important;
+    }
+    .splide__pagination{
+        bottom: -0.5em;
     }
 
 }
