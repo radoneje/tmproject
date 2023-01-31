@@ -1161,6 +1161,9 @@ h4 {
         box-sizing: border-box;
         border-radius: 0px 0px 12px 12px;
     }
+    .mainBlockRTitleWr{
+        border-radius: 0;
+    }
 
 }
 
