@@ -16,7 +16,7 @@ const adminAuth=(req, res, next)=>{
 router.get('/', adminAuth, function(req, res, next) {
   res.render("admin", {moment})
 });
-router.get('/login', adminAuth, function(req, res, next) {
+router.get('/login', function(req, res, next) {
   res.render("login", )
 });
 router.get('/general', adminAuth, async (req, res, next)=> {
