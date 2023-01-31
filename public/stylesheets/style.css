@@ -1150,6 +1150,9 @@ h4 {
     .projectItem{
         width: 100%;
     }
+    .projectItemImageWr .image, .projectItemImageWr .splide{
+        border-radius: 0 12px 0px 0;
+    }
 
 }
 
