@@ -938,7 +938,7 @@ h4 {
         margin-bottom: 24px;
     }
     .downloadPrez{
-        position: inherit;
+        position: initial;
     }
     .downloadPrezDecor{
         width: 84px;
