@@ -880,6 +880,9 @@ h4 {
     .mainBlock{
         flex-wrap: wrap;
     }
+    .mainBlockL, .mainBlockR{
+        width: 100%;
+    }
 }
 
 
