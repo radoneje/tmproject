@@ -954,9 +954,12 @@ h4 {
         line-height: 27px;
     }
     #first, #projects, .container.admin {
+
         margin-top: 64px;
+        margin-bottom: 0;
     }
     .statWr{
+        margin-top: 32px;
         flex-wrap: wrap;
     }
     .statItem {
