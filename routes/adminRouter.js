@@ -8,7 +8,7 @@ const path=require("path")
 const fs=require("fs")
 
 const adminAuth=(req, res, next)=>{
-  if(!req.sessions.admin)
+  if(!req.session.admin)
     return res.redirect("/adminlogn?redirect="+encodeURI(req.req.baseUrl))
   next();
 }
