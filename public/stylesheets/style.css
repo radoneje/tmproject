@@ -925,6 +925,19 @@ h4 {
         padding:0 16px;
         font-size: 20px;
         line-height: 30px;
+        margin-bottom: 8px;
+    }
+    h4{
+        margin-left: 0;
+        width: 100%;
+        padding:0 16px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #D2C7FB;
+    }
+    .downloadPrez{
+        position: inherit;
     }
 }
 
