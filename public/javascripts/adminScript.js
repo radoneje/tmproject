@@ -255,7 +255,7 @@ let app = new Vue({
             if (this.section == 6) {
                 this.mainImages = (await axios.get("/admin/mainImages")).data;
             }
-            if (this.section == 6) {
+            if (this.section == 7) {
                 this.logins = (await axios.get("/admin/logins")).data;
             }
         }
