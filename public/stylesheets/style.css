@@ -1118,6 +1118,9 @@ h4 {
     .splide__pagination{
         bottom: -0.5em;
     }
+    #projects .sectionHeaderIcon{
+        display:   none;
+    }
 
 }
 
