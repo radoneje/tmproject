@@ -22,9 +22,10 @@ html(lang="ru")
     body
         .mainHead()
             .mainTower
-                .mainMenu.flex.descktop
-                    a.mainLogo(href="/")
-                        img(src="/images/tm.svg" alt="LOGO")
+                .mainMenu.descktop
+                    .mainMenuBoxWr.flex
+                        a.mainLogo(href="/")
+                            img(src="/images/tm.svg" alt="LOGO")
 
                     include mainSection/mainMenuItems
                 .mobileMenu.mobile.active
