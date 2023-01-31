@@ -29,7 +29,7 @@ router.post('/login', async function(req, res, next) {
   if(!req.body.pass || req.body.pass.length<2  || req.body.pass.length>20)
     return res.render("login", {name:req.body.name, msg:"Пароль неверен", passFocus:true})
 
-  let user = await req.db.collection('general').findOne({name:req.body.name, pass:req.body.pass})
+  let user = await req.db.collection('logins').findOne({name:req.body.name, pass:req.body.pass, isDeleted:false, isActive:true})
   if(!user)
     return res.render("login", {name:req.body.name, msg:"Пароль неверен", passFocus:true})
   req.session.admin=user;
