@@ -1124,6 +1124,9 @@ h4 {
     .downloadPres2 div{
     display: none;
      }
+    #projects .sectionHeader{
+        padding: 0 12px;
+    }
 
 }
 
