@@ -1075,9 +1075,7 @@ h4 {
         box-sizing: border-box;
         flex-direction: column-reverse;
     }
-    .foolerContact{
-        justify-content: left;
-    }
+
     .foolerItem{
         width: 100%;
         font-size: 14px;
@@ -1095,6 +1093,7 @@ h4 {
     }
     .foolerContact{
         width: 100%;
+        justify-content: left;
     }
 }
 
