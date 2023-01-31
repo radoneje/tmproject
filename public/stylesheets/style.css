@@ -1035,6 +1035,8 @@ h4 {
     .section{
         background: #FFFFFF;
         margin-bottom:24px ;
+        width: 100%;
+
     }
 }
 
