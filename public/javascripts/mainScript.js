@@ -36,6 +36,10 @@ async function showImages(projectid){
         elem.innerHTML=await response.text();
         document.body.style.overflow="hidden";
         document.body.appendChild(elem)
+
+        let splide = new Splide( '.splide' );
+        splide.mount();
+
         let btn=document.querySelector(".close")
 
         btn.addEventListener("click",()=>{closeModal()})
