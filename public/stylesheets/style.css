@@ -865,6 +865,11 @@ h4 {
         margin-bottom: 24px;
         margin-left: 0;
     }
+    .menu-item:hover {
+        font-weight: 600;
+        color: #7857F1;
+        background-color:inherit;
+    }
 }
 
 
