@@ -737,10 +737,10 @@ h4 {
     background: #6944F0;
 }
 .mobile{
-    visibility: hidden;
+    display: none;
 }
 .descktop{
-    visibility: visible;
+    display: block;
 }
 
 @media all and (max-width: 1248px){
@@ -766,10 +766,10 @@ h4 {
 }
 @media all and (max-width: 975px) {
     .mobile{
-        visibility: visible;
+        display: block;
     }
     .descktop{
-        visibility: hidden;
+        display: none;
     }
     .mobileMenu{
         background: #FFFFFF;
