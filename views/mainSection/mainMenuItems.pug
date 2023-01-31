@@ -19,7 +19,7 @@
         </defs>
         </svg>
     .rel()
-        .mainSubMenuItem.flex.center(" onclick="let elem=this.parentNode.querySelector('.mainContactsBlock');elem.classList.add('active'); setTimeout(()=>{elem.classList.remove('active')},10000)") Контакты
+        .mainSubMenuItem.flex.center(onclick="let elem=this.parentNode.querySelector('.mainContactsBlock');elem.classList.add('active'); setTimeout(()=>{elem.classList.remove('active')},10000)") Контакты
         .mainContactsBlock
             if facts
                 .mainContactsItem(onclick="navigator.clipboard.writeText('"+facts.phone+"');this.classList.add('active'); setTimeout(()=>{this.classList.remove('active');},1000)" )
