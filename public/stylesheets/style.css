@@ -1026,7 +1026,7 @@ h4 {
     #services, #geo, #clients{
         padding: 0 16px;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 0 !important;
         background: #f7f6fe;
 
     }
