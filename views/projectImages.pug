@@ -1,7 +1,19 @@
 .videoBox
-    .projectItemImageWr
-        if project.images.length==1
+
+    if project.images.length==1
+        .projectItemImageWr
             .image(style="background-image: url("+project.images[0].url+");")
+    if project.images.length>1
+            .splide(role="group" style="width: 100%;" data-splide='{"type":"loop","speed":"1000", "arrows":false, "pagination":false, "autoplay":true,"interval":3000, "lazyLoad":"nearby", "keyboard":false}')
+                .splide__track
+                    ul.splide__list
+                        each image in project.images
+                            li.splide__slide
+                                .projectItemImageWr
+                                    .image(style="background-image: url(" + image.url + ");")
+
+
+
 
     .close.pointer.flex.center
         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
