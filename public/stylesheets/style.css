@@ -1022,6 +1022,11 @@ h4 {
     .footerText{
         display: block;
     }
+    #services{
+        padding: 0 12px;
+        margin-top: 0;
+        padding-top: 64px;
+    }
 }
 
 
