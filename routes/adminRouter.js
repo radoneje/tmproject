@@ -15,7 +15,7 @@ const adminAuth=(req, res, next)=>{
   next();
 }
 /* GET users listing. */
-router.get('/', adminAuth, function(req, res, next) {
+router.get('/', function(req, res, next) {
   if(!req.session.admin)
     return res.redirect("/admin/login?redirect="+encodeURI(req.baseUrl))
   res.render("admin", {moment})
