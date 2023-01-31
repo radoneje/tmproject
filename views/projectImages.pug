@@ -2,7 +2,7 @@
 
     if project.images.length==1
         .projectItemImageWr
-            .image(style="background-image: url("+project.images[0].url+");")
+            .image(style="background-image: url('"+project.images[0].url+"');")
     if project.images.length>1
         .projectItemImageWr
             .splide(role="group" style="width: 100%;" data-splide='{"type":"loop","speed":"1000", "arrows":true, "pagination":true, "autoplay":true,"interval":3000, "lazyLoad":"nearby", "keyboard":true}')
@@ -11,7 +11,7 @@
                         each image in project.images
                             li.splide__slide
                                 .projectItemImageWr
-                                    .image(style="background-image: url(" + image.url + ");")
+                                    .image(style="background-image: url('" + image.url + "');")
     .projectSection(style="margin-top:32px;")
         .projectTitle !{project.title}
 

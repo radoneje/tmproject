@@ -23,7 +23,7 @@ block content
           .projectItem
             .projectItemImageWr(onclick="showImages('"+item._id+"')")
               if item.images.length>0
-                .image(style="background-image: url("+item.images[0].url+");")
+                .image(style="background-image: url('"+item.images[0].url+"');")
               if item.images.length>1
                 .imageSvg
                   <svg width="62" height="6" viewBox="0 0 62 6" fill="none" xmlns="http://www.w3.org/2000/svg">
