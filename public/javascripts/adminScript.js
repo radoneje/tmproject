@@ -156,7 +156,7 @@ let app = new Vue({
         },
         loginAdd: async function () {
             let r = await axios.post("/admin/loginAdd")
-            this.mainImages.unshift(r.data)
+            this.logins.unshift(r.data)
         },
         saveGeneral: async function () {
             await axios.post("/admin/general", this.general)
