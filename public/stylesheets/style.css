@@ -737,8 +737,21 @@ h4 {
     background: #6944F0;
 }
 
-@media all and (max-width: 1200px){
+@media all and (max-width: 1248px){
     .mainTower{
         padding: 0 24px;
+    }
+}
+@media all and (max-width: 1080px){
+    .mainTower{
+        padding: 0 24px;
+    }
+    .downloadPrez{
+        align-items: flex-end;
+        bottom: 16px;
+    }
+    .downloadPrezDecor {
+        width: 70px;
+        height: 70px;
     }
 }
