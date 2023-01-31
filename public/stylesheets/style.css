@@ -1019,6 +1019,9 @@ h4 {
         width: 24px;
         height: 24px
     }
+    .footerText{
+        display: block;
+    }
 }
 
 
