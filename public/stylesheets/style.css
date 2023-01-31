@@ -984,6 +984,20 @@ h4 {
         padding: 0 16px;
         justify-content: space-between;
     }
+    .statItemText{
+        font-size: 48px;
+    }
+    .videoWr{
+        display: block;
+    }
+    .videoImageWr{
+
+    }
+    .videoItem {
+        margin: 0 auto;
+        margin-bottom: 24px;
+        width: calc(100% - 48px);
+    }
 }
 
 
