@@ -581,11 +581,25 @@ h4 {
     margin-bottom: 12px;
 }
 .mainBlockRWr .splide__slide{
-    height: 502px;
+
     position: relative;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+}
+.splideWr{
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.slideBody{
+    background: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 .mainHead{
     position: fixed;
