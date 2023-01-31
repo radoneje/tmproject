@@ -952,6 +952,9 @@ h4 {
         font-size: 18px;
         line-height: 27px;
     }
+    #first, #projects, .container.admin {
+        margin-top: 64px;
+    }
 }
 
 
