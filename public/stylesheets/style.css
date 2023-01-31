@@ -1054,6 +1054,9 @@ h4 {
     #geo{
         padding-top: 64px;
     }
+    #geo .sectionHeaderIcon svg{
+        width: 60px;
+    }
 }
 
 
