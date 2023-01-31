@@ -9,14 +9,13 @@ const fs=require("fs")
 const {updateSessionFromResponse} = require("mongodb/src/sessions");
 
 const adminAuth=(req, res, next)=>{
-  if(!req.session.admin)
-    return res.sendStatus(401)
 
+  if(!req.session.admin)
+    return res.redirect("/admin/login?redirect="+encodeURI(req.baseUrl))
   next();
 }
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-
+router.get('/', adminAuth, function(req, res, next) {
   res.render("admin", {moment})
 });
 router.get('/login', function(req, res, next) {
