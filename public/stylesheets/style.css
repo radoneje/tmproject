@@ -1005,6 +1005,20 @@ h4 {
         width: 100vw;
         box-sizing: border-box;
     }
+    .fullScreenWr{
+        padding: 0;
+        width: 100vw;
+
+    }
+    .videoBox{
+        padding: 12px;
+    }
+    .close{
+        right: 16px;
+        top: 16px;
+        width: 16px;
+        height: 16px
+    }
 }
 
 
