@@ -826,9 +826,15 @@ h4 {
         bottom: 0;
         left: 0;
         background: #FFFFFF;
+        padding: 24px;
+        box-sizing: border-box;
     }
     .mobileMenuBoxFooter{
         height: 140px;
+    }
+    .foolerContact{
+        margin-bottom: 12px;
+        margin-top: 12px;
     }
 }
 
