@@ -879,6 +879,7 @@ h4 {
     }
     .mainBlock{
         flex-wrap: wrap;
+        flex-direction:column-reverse;
     }
     .mainBlockL, .mainBlockR{
         width: 100%;
