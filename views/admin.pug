@@ -34,6 +34,12 @@ block content
                     .input-group.mb-3
                         span.Allparams.input-group-text Речевка
                         input( type="text" class="form-control"  placeholder="Введите речевку" v-model="general.rechevka" v-on:change="saveGeneral()" )
+                    .input-group.mb-3
+                        span.Allparams.input-group-text Титл для мессдж.
+                        input( type="text" class="form-control"  placeholder="Введите title" v-model="general.og_title" v-on:change="saveGeneral()" )
+                    .input-group.mb-3
+                        span.Allparams.input-group-text Описание для мессдж.
+                        input( type="text" class="form-control"  placeholder="Введите description" v-model="general.og_descr" v-on:change="saveGeneral()" )
                     img.img-thumbnail(:src="general.mainImgUrl")
                     .input-group.mb-3
                         span.Allparams.input-group-text Подпись гл. картинки
