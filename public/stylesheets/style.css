@@ -1133,6 +1133,9 @@ h4 {
         padding: 16px 14px;
         border-radius: 30px;
     }
+    .downloadPres2 svg path{
+        fill:#FFFFFF
+    }
 
 }
 
