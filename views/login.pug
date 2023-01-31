@@ -26,6 +26,9 @@ block content
     else
         script.
             document.getElementById("name").focus()
+    script.
+        let frm= document.querySelector("form")
+            frm.action=frm.action+window.location.search
 
 
 
