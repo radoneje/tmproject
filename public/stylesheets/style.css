@@ -962,6 +962,8 @@ h4 {
     .statItem {
         width: calc(100% - 24px);
         background: #FFFFFF;
+        margin: 24px 12px ;
+
     }
 }
 
