@@ -892,6 +892,16 @@ h4 {
         background-size: cover;
 
     }
+    .mainBlockRTitleWr svg{
+        display: none;
+    }
+    .mainBlockRTitleWr{
+        padding-right: 24px;
+    }
+    .mainBlockRTitle{
+        font-size: 14px;
+        line-height: 21px;
+    }
 }
 
 
