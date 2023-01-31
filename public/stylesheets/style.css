@@ -908,6 +908,17 @@ h4 {
         font-size: 14px;
         line-height: 21px;
     }
+    .MLdecor1{
+        display: none;
+    }
+    h1{
+        margin-top: 24px;
+        margin-left: 0;
+        width: 100%;
+        padding:0 8px;
+        font-size: 36px;
+        line-height: 54px;
+    }
 }
 
 
