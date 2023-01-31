@@ -966,6 +966,7 @@ h4 {
         width: calc(100% - 24px);
         background: #FFFFFF;
         margin: 24px 12px ;
+        padding: 16px 24px;
 
     }
 }
