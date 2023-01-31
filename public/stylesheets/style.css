@@ -94,6 +94,10 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+.mainMenuBoxWr{
+    justify-content: space-between;
+    align-items: center;
+}
 
 .mainMenuDivaider {
     height: 2px;;
