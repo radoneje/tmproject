@@ -19,7 +19,7 @@ router.get('/', adminAuth, function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render("login", )
 });
-router.get('/login', function(req, res, next) {
+router.post('/login', function(req, res, next) {
   if(!req.body.name || req.body.name.length<2  || req.body.name.length>20)
     return res.render("login", {msg:"Введите имя пользователя"})
   if(!req.body.pass || req.body.pass.length<2  || req.body.pass.length>20)
