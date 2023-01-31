@@ -773,11 +773,20 @@ h4 {
     }
     .mobileMenu{
         background: #FFFFFF;
-        box-shadow: 0px 4px 24px rgba(152, 166, 175, 0.25);
+        box-shadow: 0px 4px 24px rgb(152 166 175 / 25%);
         height: 64px;
+        position: fixed;
+        left: 0;
+        width: 100%;
+        top: 0;
+        box-sizing: border-box;
+        padding: 24px;
     }
     .mobileMenuItem{
         cursor: pointer;
+    }
+    .mobileMenuBox{
+
     }
 }
 
