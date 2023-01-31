@@ -75,5 +75,11 @@ router.get('/video/:_id', async (req, res, next)=> {
 
   res.render("video", {video})
 });
+router.get('/projectImages/:_id', async (req, res, next)=> {
+  let project =  await req.db.collection('projects').findOne({_id:ObjectId(req.params._id)})
+
+  res.render("projectImages", {project})
+});
+
 
 module.exports = router;

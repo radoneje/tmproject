@@ -19,6 +19,23 @@ document.addEventListener( 'DOMContentLoaded', function() {
     var splide = new Splide( '.splide' );
     splide.mount();
 } );
+async function showImages(projectid){
+    let response=await fetch("/projectImages/"+projectid);
+    if(response.ok){
+        let elem =document.createElement("div")
+        elem.classList.add("fullScreenWr");
+        elem.classList.add("flex");
+        elem.classList.add("center");
+        elem.innerHTML=await response.text();
+        document.body.style.overflow="hidden";
+        document.body.appendChild(elem)
+        let btn=document.querySelector(".close")
+        btn.addEventListener("click",()=>{
+            document.body.removeChild(elem);
+            document.body.style.overflow=null;
+        })
+    }
+}
 
 /*document.querySelectorAll(".menu a.menu-item").forEach(el=>{
     el.onclick=(e)=>{
