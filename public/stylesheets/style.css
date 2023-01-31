@@ -940,6 +940,7 @@ h4 {
     .downloadPrez{
         position: initial;
         margin-bottom: 36px;
+        margin-left: -102px
     }
     .downloadPrezDecor{
         width: 84px;
