@@ -128,12 +128,28 @@ router.post('/mainImage',adminAuth, async (req, res, next)=> {
 
   res.json(r)
 });
+router.post('/logins',adminAuth, async (req, res, next)=> {
+
+  let find={id:req.body.id}
+  if(req.body._id)
+    find={_id:ObjectId(req.body._id)}
+
+  delete req.body._id;
+
+  let r=await req.db.collection('logins').updateOne(find,{$set: req.body});
+  res.json(r)
+});
 
 
 
 
 router.get('/mainImages',adminAuth, async (req, res, next)=> {
   let r=await req.db.collection('mainImages').find({isDeleted:false},{sort: { id: 1 },}).toArray();
+  r=r.reverse()
+  res.json(r)
+});
+router.get('/logins',adminAuth, async (req, res, next)=> {
+  let r=await req.db.collection('logins').find({isDeleted:false},{sort: { id: 1 },}).toArray();
   r=r.reverse()
   res.json(r)
 });
@@ -152,6 +168,21 @@ router.post('/mainImageAdd',adminAuth, async (req, res, next)=> {
   await req.db.collection('mainImages').insertOne(item);
   res.json(item)
 });
+
+
+router.post('/loginAdd',adminAuth, async (req, res, next)=> {
+
+  let item={
+    id:moment().unix(),
+    name:"",
+    pass:"",
+    isActive:false,
+    isDeleted:false,
+  }
+  await req.db.collection('logins').insertOne(item);
+  res.json(item)
+});
+
 
 
 router.post('/addService',adminAuth, async (req, res, next)=> {

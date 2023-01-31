@@ -9,7 +9,8 @@ let app = new Vue({
         commands: [],
         geografy: {},
         mainImages:[],
-        projects:[]
+        projects:[],
+        logins:[],
     },
     methods: {
         toggleMainImage:async function(item,sect){
@@ -17,6 +18,12 @@ let app = new Vue({
             await this.saveMainImage(item)
             if(sect=="isDeleted")
                 this.mainImages=this.mainImages.filter(i=>i.id!=item.id)
+        },
+        toggleLogin:async function(item,sect){
+            item[sect]=item[sect]?false:true;
+            await this.saveLogin(item)
+            if(sect=="isDeleted")
+                this.logins=this.logins.filter(i=>i.id!=item.id)
         },
         toggleProjectImage:async function(item,sect){
             item[sect]=item[sect]?false:true;
@@ -26,6 +33,9 @@ let app = new Vue({
         },
         saveMainImage:async function(item){
             await axios.post("/admin/mainImage", item)
+        },
+        saveLogin:async function(item){
+            await axios.post("/admin/logins", item)
         },
         toggleRecord:async function (section, item, record, prm) {
             record[prm] = !record[prm];
@@ -144,6 +154,10 @@ let app = new Vue({
             let r = await axios.post("/admin/mainImageAdd")
             this.mainImages.unshift(r.data)
         },
+        loginAdd: async function () {
+            let r = await axios.post("/admin/loginAdd")
+            this.mainImages.unshift(r.data)
+        },
         saveGeneral: async function () {
             await axios.post("/admin/general", this.general)
         },
@@ -240,6 +254,9 @@ let app = new Vue({
             }
             if (this.section == 6) {
                 this.mainImages = (await axios.get("/admin/mainImages")).data;
+            }
+            if (this.section == 6) {
+                this.logins = (await axios.get("/admin/logins")).data;
             }
         }
     },
