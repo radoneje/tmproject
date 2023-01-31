@@ -956,6 +956,13 @@ h4 {
     #first, #projects, .container.admin {
         margin-top: 64px;
     }
+    .statWr{
+        flex-wrap: wrap;
+    }
+    .statItem {
+        width: calc(100% - 24px);
+        background: #FFFFFF;
+    }
 }
 
 
