@@ -6,7 +6,7 @@ const upload = multer({dest: "public/uploads/"})
 const {ObjectId} = require('mongodb');
 const path=require("path")
 const fs=require("fs")
-const {updateSessionFromResponse} = require("mongodb/src/sessions");
+
 
 const adminAuth=(req, res, next)=>{
 
