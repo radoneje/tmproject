@@ -9,13 +9,13 @@ block content
         div
             .aAdminMenu
                 .d-grid.gap-2
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==0, "btn-outline-secondary":section!=0}' v-on:click="section=0" style="text-align: left;") Общая информация
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==6, "btn-outline-secondary":section!=6}' v-on:click="section=6" style="text-align: left;") Главная картинка
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==1, "btn-outline-secondary":section!=1}' v-on:click="section=1" style="text-align: left;") Видео
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==2, "btn-outline-secondary":section!=2}' v-on:click="section=2" style="text-align: left;") Услуги
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==3, "btn-outline-secondary":section!=3}' v-on:click="section=3" style="text-align: left;") Команда и география
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==4, "btn-outline-secondary":section!=4}' v-on:click="section=4" style="text-align: left;") Клиенты
-                    .btn.mb-3(v-bind:class='{"btn-primary":section==5, "btn-outline-secondary":section!=5}' v-on:click="section=5" style="text-align: left;") Все проекты
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==0, "btn-outline-secondary":section!=0}' v-on:click="section=0" style="text-align: left;") Общая информация
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==6, "btn-outline-secondary":section!=6}' v-on:click="section=6" style="text-align: left;") Главная картинка
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==1, "btn-outline-secondary":section!=1}' v-on:click="section=1" style="text-align: left;") Видео
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==2, "btn-outline-secondary":section!=2}' v-on:click="section=2" style="text-align: left;") Услуги
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==3, "btn-outline-secondary":section!=3}' v-on:click="section=3" style="text-align: left;") Команда и география
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==4, "btn-outline-secondary":section!=4}' v-on:click="section=4" style="text-align: left;") Клиенты
+                    .btn.mb-1(v-bind:class='{"btn-primary":section==5, "btn-outline-secondary":section!=5}' v-on:click="section=5" style="text-align: left;") Все проекты
             .aAdminMain
                 div(v-if="section==0")
                     h4 Общие параметры
