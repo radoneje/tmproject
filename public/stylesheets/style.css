@@ -959,7 +959,7 @@ h4 {
         margin-bottom: 0;
     }
     .statWr{
-        margin-top: 32px;
+        padding-top: 32px;
         flex-wrap: wrap;
     }
     .statItem {
