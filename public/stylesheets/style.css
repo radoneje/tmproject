@@ -803,6 +803,11 @@ h4 {
     }
     .mobileMenuWr{
         padding: 24px;
+        position: fixed;
+        box-sizing: border-box;
+        width: 100%;
+        top:0;
+        left: 0;
     }
     .mobileMenuModal{
         width: 100%;
