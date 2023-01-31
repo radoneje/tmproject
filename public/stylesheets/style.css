@@ -999,7 +999,7 @@ h4 {
         width: calc(100% - 48px);
     }
     #video{
-        margin-top: 64px;
+        padding-top: 64px;
     }
 }
 
