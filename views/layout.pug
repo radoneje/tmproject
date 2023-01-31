@@ -47,7 +47,7 @@ html(lang="ru")
                             <rect y="16" width="30" height="3" rx="1.5" fill="#6944F0"/>
                             </svg>
                     .mobileMenuBox
-                        .mobileMenuModal
+                        .mobileMenuModal.flex.center
                             .mobileMenuBoxHead.flex.between
                                 div(onclick="document.location.href='/'")
                                     <svg width="93" height="16" viewBox="0 0 93 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,6 +70,9 @@ html(lang="ru")
                                 include mainSection/contacts
 
 
+
+                            .mobileMenuBoxItems
+                                include mainSection/mainMenuItems
 
             .mainMenuDivaider.descktop
         block content
