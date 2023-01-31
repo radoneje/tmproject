@@ -6,6 +6,7 @@ const upload = multer({dest: "public/uploads/"})
 const {ObjectId} = require('mongodb');
 const path=require("path")
 const fs=require("fs")
+const {updateSessionFromResponse} = require("mongodb/src/sessions");
 
 const adminAuth=(req, res, next)=>{
   if(!req.session.admin)
@@ -19,13 +20,20 @@ router.get('/', adminAuth, function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render("login", )
 });
-router.post('/login', function(req, res, next) {
+router.post('/login', async function(req, res, next) {
   if(!req.body.name || req.body.name.length<2  || req.body.name.length>20)
     return res.render("login", {msg:"Введите имя пользователя"})
   if(!req.body.pass || req.body.pass.length<2  || req.body.pass.length>20)
     return res.render("login", {name:req.body.name, msg:"Пароль неверен"})
 
-  return res.render("login", {name:req.body.name, msg:"Вход выполнен"})
+  let user = await req.db.collection('general').findOne({name:req.body.name, pass:req.body.pass})
+  if(!user)
+    return res.render("login", {name:req.body.name, msg:"Пароль неверен"})
+  req.session.admin=user;
+  let url="/"
+  if(req.query.redirect)
+    url=decodeURI(req.query.redirect)
+  res.redirect(url)
 });
 
 router.get('/general', adminAuth, async (req, res, next)=> {
