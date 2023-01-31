@@ -587,6 +587,9 @@ h4 {
     background-position: center;
     background-repeat: no-repeat;
 }
+.splide__pagination{
+    bottom: -0.5em;
+}
 .splideWr{
     width: 100%;
     position: relative;
