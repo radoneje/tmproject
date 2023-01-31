@@ -939,10 +939,12 @@ h4 {
     }
     .downloadPrez{
         position: initial;
+        margin-bottom: 36px;
     }
     .downloadPrezDecor{
         width: 84px;
         height: 84px;
+        margin-right: -28px;
     }
     .downloadPrezText{
         font-weight: 600;
