@@ -23,8 +23,10 @@ const showVideo=async(_id)=>{
     }
 }
 document.addEventListener( 'DOMContentLoaded', function() {
-    var splide = new Splide( '.splide' );
-    splide.mount();
+    if(document.querySelector('.splide')) {
+        let splide = new Splide('.splide');
+        splide.mount();
+    }
 } );
 async function showImages(projectid){
     let response=await fetch("/projectImages/"+projectid);
@@ -37,8 +39,10 @@ async function showImages(projectid){
         document.body.style.overflow="hidden";
         document.body.appendChild(elem)
 
-        let splide = new Splide( '.splide' );
-        splide.mount();
+        if(document.querySelector('.splide')) {
+            let splide = new Splide('.splide');
+            splide.mount();
+        }
 
         let btn=document.querySelector(".close")
 
