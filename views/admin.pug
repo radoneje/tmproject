@@ -43,7 +43,7 @@ block content
                     img.img-thumbnail(:src="general.og_image")
                     .input-group.mb-3
                         span.Allparams.input-group-text URL og_image (1200x627)
-                        input( type="text" class="form-control"  placeholder="Введите URL og_image" v-model="general.og_image" v-on:change=" saveGeneral()" )
+                        input( type="text" class="form-control"  placeholder="Введите URL og_image" v-model="general.og_image"  readonly )
                         span.input-group-text.pointer(v-on:click="uploadOg_image()") <iconify-icon icon="bi:upload"></iconify-icon>
 
 
