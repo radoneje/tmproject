@@ -1073,6 +1073,7 @@ h4 {
         padding: 0 12px;
         width: 100%;
         box-sizing: border-box;
+        flex-direction: column-reverse;
     }
     .foolerItem{
         width: 100%;
