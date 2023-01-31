@@ -998,6 +998,9 @@ h4 {
         margin-bottom: 24px;
         width: calc(100% - 48px);
     }
+    #video{
+        margin-top: 64px;
+    }
 }
 
 
