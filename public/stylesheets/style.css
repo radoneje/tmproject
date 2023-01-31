@@ -396,6 +396,7 @@ h4 {
     height: 100%;
     position: fixed;
     background: rgba(64, 74, 81, 0.3);
+    z-index: 10000;
 }
 .videoWrapper {
     position: relative;
