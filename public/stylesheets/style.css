@@ -1070,6 +1070,15 @@ h4 {
         padding: 16px;
         border-radius: 12px;
     }
+    .footerText{
+        flex-wrap: wrap;
+        padding: 0 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .foolerItem{
+        width: 100%;
+    }
 }
 
 
