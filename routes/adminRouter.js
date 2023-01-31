@@ -24,6 +24,8 @@ router.get('/login', function(req, res, next) {
     return res.render("login", {msg:"Введите имя пользователя"})
   if(!req.body.pass || req.body.pass.length<2  || req.body.pass.length>20)
     return res.render("login", {name:req.body.name, msg:"Пароль неверен"})
+
+  return res.render("login", {name:req.body.name, msg:"Вход выполнен"})
 });
 
 router.get('/general', adminAuth, async (req, res, next)=> {
