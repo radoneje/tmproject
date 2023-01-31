@@ -736,3 +736,9 @@ h4 {
 .splide__pagination__page.is-active:after{
     background: #6944F0;
 }
+
+@media all and (max-width: 120px){
+    .mainTower{
+        padding: 0 24px;
+    }
+}
