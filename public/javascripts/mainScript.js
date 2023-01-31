@@ -31,9 +31,21 @@ async function showImages(projectid){
         document.body.appendChild(elem)
         let btn=document.querySelector(".close")
         btn.addEventListener("click",()=>{
+            closeModal()
+        })
+        elem.addEventListener("click",(e)=>{
+
+            closeModal();
+        })
+        document.querySelector(".videoBox").addEventListener("click",(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+        })
+        function closeModal(){
             document.body.removeChild(elem);
             document.body.style.overflow=null;
-        })
+
+        }
     }
 }
 
