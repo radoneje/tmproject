@@ -1,5 +1,10 @@
 extends layout
+block head
+  meta(property="og:title" content=facts.og_title)
+  meta(property="og:image" content="https://tmproject.rustv.ru"+facts.og_image)
+  meta(property="og:description" content=facts.og_descr)
 
+  <meta property="og:type" content="article" />
 block content
   section#first
     include mainSection/first
