@@ -1085,6 +1085,9 @@ h4 {
         width: 100%;
     }
     .foolerItemContactWr{
+       flex-wrap: wrap;
+    }
+    .foolerContact{
         width: 100%;
     }
 }
