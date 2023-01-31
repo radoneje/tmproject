@@ -855,6 +855,7 @@ h4 {
     }
     body.activeMobileMenu{
         overflow: hidden;
+        position:relative;
     }
     .mobileMenuBoxFooterWr{
         position: absolute;
