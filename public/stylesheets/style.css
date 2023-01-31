@@ -853,8 +853,11 @@ h4 {
         color: #666E74;
         margin-bottom: 24px;
     }
-    .mobile .mainSubMenuItem{
+    .mobile .mainSubMenu{
         display: block;
+    }
+    .mobile .mainSubMenuItem{
+        margin-bottom: 24px;
     }
 }
 
