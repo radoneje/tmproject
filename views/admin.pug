@@ -186,9 +186,9 @@ block content
                         .btn.btn-secondary.btn-sm.mb-3(v-on:click="loginAdd()") Добавить пользователя
 
                         .alert.alert-danger(v-if="logins.filter(i=>i.isActive).length<1") Нет ни одной активной записи!
-
-                                .aMainImageItem(v-for="item in logins")
-                                    .input-group.mb-3
+                        .aMainImageWr
+                                .aMainImageItem
+                                    .input-group.mb-3(v-for="item in logins")
                                         span.input-group-text.pointer(v-if="item.isActive" v-on:click="toggleProjectImage( item,'isActive')")
                                             iconify-icon.green(icon="bi:lightbulb")
                                         span.input-group-text.pointer(v-else v-on:click="toggleLogin( item,'isActive')")
