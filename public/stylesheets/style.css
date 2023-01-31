@@ -868,7 +868,7 @@ h4 {
     .menu-item:hover {
         font-weight: 600;
         color: #7857F1;
-        background-color:inherit;
+        background-color:transparent;
     }
 }
 
