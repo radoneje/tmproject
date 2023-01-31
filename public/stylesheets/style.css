@@ -737,7 +737,7 @@ h4 {
     background: #6944F0;
 }
 
-@media all and (max-width: 120px){
+@media all and (max-width: 1200px){
     .mainTower{
         padding: 0 24px;
     }
