@@ -1061,7 +1061,8 @@ h4 {
         width: 60px;
     }
     #clients{
-        padding-top: 64px;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
     #clients .videoWr{
         box-sizing: border-box;
