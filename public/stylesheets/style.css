@@ -969,6 +969,12 @@ h4 {
         padding: 16px 24px;
 
     }
+    #stat{
+        margin-bottom: 0;
+    }
+    #video{
+        padding-bottom: 36px;
+    }
 }
 
 
