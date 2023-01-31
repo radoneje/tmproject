@@ -9,10 +9,17 @@ const showVideo=async(_id)=>{
         document.body.style.overflow="hidden";
         document.body.appendChild(elem)
         let btn=document.querySelector(".close")
-        btn.addEventListener("click",()=>{
+        btn.addEventListener("click",()=>{closeModal()})
+        elem.addEventListener("click",(e)=>{closeModal();})
+        document.querySelector(".videoBox").addEventListener("click",(e)=>{
+            e.preventDefault();
+            e.stopPropagation();
+        })
+
+        function closeModal(){
             document.body.removeChild(elem);
             document.body.style.overflow=null;
-        })
+        }
     }
 }
 document.addEventListener( 'DOMContentLoaded', function() {
@@ -30,21 +37,17 @@ async function showImages(projectid){
         document.body.style.overflow="hidden";
         document.body.appendChild(elem)
         let btn=document.querySelector(".close")
-        btn.addEventListener("click",()=>{
-            closeModal()
-        })
-        elem.addEventListener("click",(e)=>{
 
-            closeModal();
-        })
+        btn.addEventListener("click",()=>{closeModal()})
+        elem.addEventListener("click",(e)=>{closeModal();})
         document.querySelector(".videoBox").addEventListener("click",(e)=>{
             e.preventDefault();
             e.stopPropagation();
         })
+
         function closeModal(){
             document.body.removeChild(elem);
             document.body.style.overflow=null;
-
         }
     }
 }
