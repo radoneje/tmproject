@@ -722,13 +722,16 @@ h4 {
 .splide__pagination__page.is-active{
     position: relative;
 }
-.splide__pagination__page.is-active:after{
+.splide__pagination__page:after{
     content: '';
-    width: 80%;
-    height: 80%;
+    width: 60%;
+    height: 60%;
     position: absolute;
-    top:10%;
-    left: 10%;
+    top:20%;
+    left: 20%;
     border-radius: 50%;
+    background: transparent;
+}
+.splide__pagination__page.is-active:after{
     background: #6944F0;
 }
