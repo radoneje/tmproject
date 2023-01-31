@@ -645,7 +645,7 @@ h4 {
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
 }
-.projectItemImageWr .image {
+.projectItemImageWr .image, .projectItemImageWr .slider {
     position: absolute;
     top: 0;
     left: 0;
