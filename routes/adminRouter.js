@@ -19,6 +19,13 @@ router.get('/', adminAuth, function(req, res, next) {
 router.get('/login', function(req, res, next) {
   res.render("login", )
 });
+router.get('/login', function(req, res, next) {
+  if(!req.body.name || req.body.name.length<2  || req.body.name.length>20)
+    return res.render("login")
+  if(!req.body.pass || req.body.pass.length<2  || req.body.pass.length>20)
+    return res.render("login", {name:req.body.name, msg:"пароль неверен"})
+});
+
 router.get('/general', adminAuth, async (req, res, next)=> {
   let ret =  await req.db.collection('general').findOne({id:"facts"})
   res.json(ret?ret.value:{})
