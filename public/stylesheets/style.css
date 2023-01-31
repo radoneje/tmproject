@@ -772,6 +772,9 @@ h4 {
     .mobile{
         display: block;
     }
+    body{
+        background: #f7f6fe;
+    }
     .descktop{
         display: none;
     }
